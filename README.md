@@ -52,10 +52,10 @@ When you're ready to make this README your own, just edit this file and use the 
 Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
 ## Name
-Teamarbeit aus zwei Personen: Shansai, Armend
+BlogGate
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+## Projektvision/Beschreibung
+Das Ziel ist es, Spieler auf der ganzen Welt zu verbinden und zu informieren. Wir streben an, die beste Gaming Blog Seite zu sein und uns so einen prägenden Namen in der Gaming Szene zu verschaffen. Unser Start-Up möchte eine aktive Gemeinschaft von Spielern bis zu Entwicklern aufbauen, die ihre Leidenschaft teilen und sich gegenseitig unterstützten. Der Blog wird eine umfassende Informationsquelle für jegliche Arten von Spielen sein. Dazu gehören aktuelle populäre Blockbuster bis zu vergangenen Klassikern. Dementsprechend bieten wir unseren Lesern immer den aktuellsten Stand an Inhalten, Spieletests, News, Interviews, Tutorials und Tipps. Der Blog ist für jeden Interessenten Zugänglich und dient als Diskussiongrundlage zu verschiedensten Themen. Dazu können die User untereinander Meinungen, Erfahrungen und Ratschläge austauschen. Unsere Seite soll eine Community aufbauen, die freundliche und hilfsbereite Gamer connected, die jeden Gamer frei von jeglicher Diskriminierung wilkommen heisst. Mit Blogate leisten wir unseren Beitrag zu einer gesunden Gaming Community. Unsere Leser sollen mithilfe den Bloggs ihr Gaming-Erlebnis verbessern und mit erlernten Wissen die Blogging-Plattform verlassen. Zuletzt wollen wir mit unser Blogging-Plattform den Gamern einen zweites Zuhause bieten, an denen sich jeder Gamer wohlfühlt und ihre Leideinschaft zu den Lieblingsspielen mit der Welt teilen kann. 
 
 ## Badges
 On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
