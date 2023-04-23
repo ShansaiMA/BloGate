@@ -56,7 +56,7 @@ Every project is different, so consider which of these sections apply to yours. 
 
 
 
-![Logo der BloGate Page.] Hier kommt das Logo hin!!!
+![Logo der BloGate Page.](C:\Users\armen\OneDrive\Dokumente\GitHub\webtec-sose-23\Transparentes Logo.png) 
 
 ## Name
 BloGate
