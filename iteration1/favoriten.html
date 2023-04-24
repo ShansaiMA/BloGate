@@ -11,7 +11,7 @@
     </a>
     <body>
         <h1>Favoritenseite</h1>
-        <table>
+        <table border="1">
             <thead>
             <tbody>
                 <tr>
@@ -30,5 +30,47 @@
                   </tr>
             </tbody>
         </table>
+
+        <br>
+
+        <table border="3">
+            <thead>
+              <tr>
+                <th>Artikelüberschrift</th>
+                <th>Autor</th>
+                <th>Bildvorschau</th>
+                <th>Veröffentlichungsdatum</th>
+                <th>Löschen</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Artikel 1</td>
+                <td>Armo</td>
+                <td><img src="../img/Artikel Fotos/Riley Freeman.jpg" alt="Profilbild von Armo" width="50"></td>
+                <td>24.04.2023</td>
+                <td><button onclick="deleteArticle(this)"><span>&#128465;</span> Artikel entfernen</button></td>
+              </tr>
+              <tr>
+                <td>Beispielartikel 2</td>
+                <td>Maria Musterfrau</td>
+                <td><img src="bild2-klein.jpg" alt="Bildvorschau"></td>
+                <td>15.03.2022</td>
+                
+                <td><button onclick="deleteArticle(this)"><span>&#128465;</span> Artikel entfernen</button></td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <script>
+          function deleteArticle(button) {
+            const row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+          }
+          </script>
+    
+
+        </div>
+          
      </body>
 </html>
