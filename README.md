@@ -1,6 +1,6 @@
 # webtec-sose-23
 
-![Logo der BloGate Page.](img/Transparentes%20Logo.png) 
+![Logo der BloGate Page.](img/Blogate%20Logo.png)
 
 ## Name
 BloGate
