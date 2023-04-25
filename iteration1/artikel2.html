@@ -1,24 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
   <head>
-
+    <meta charset="utf-8" >
+    <meta name="author" content="Name des Autors">
+    <meta name="description" content="Zusammenfassung des Artikels">
+    <meta name="keywords" content="Schlüsselwörter, die den Artikel beschreiben">
+    <meta name="date" content="Veröffentlichungsdatum">
+    <meta name="image" content="URL des Bildes">
+    <meta name="category" content="Themenbereich">
+    <meta name="favcount" content="Anzahl Personen, die den Blog-Artikel zu ihrer Favoritenliste hinzugefügt haben">
+    <meta name="readtime" content="Durchschnittliche Lesezeit">
     <style>
       body {
         font-family: 'Open Sans', sans-serif;
         background-color: #F3F5F6;
       }
     </style>
-    <title>artikel2</title>
+    <script>
+      function addToFavorites () {
+        var favCount = document.getElementById("fav-count");
+        var count =parseInt(favCount.textContent);
+        favCount.textContent = count + 1;
+      }
+    </script>
+
+    <title>Artikel2</title> <!--Hier muss der Name des Blogs rein--> 
   </head>
 
-  
   <body>
     <a href="startseite.html" >
 
       <img src="../img/Transparentes Logo.png" alt="Logo der Webseite"width="300px"/>
     </a>
     <br>
-    <h1>artikel2</h1>
+    <h1>?BLOGNAME?</h1>
     <br>
     <br>
   </body>
