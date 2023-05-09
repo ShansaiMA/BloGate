@@ -12,8 +12,7 @@
 
 
 
-
-
+        
 
 
 
@@ -24,17 +23,10 @@
 
 /* Das Untere gehört zum Kommentarbereich*/
 
-.textarea-box {
-    width: 200px;
-    height: 100px;
-    overflow: auto;
-  } 
-
-  .legend-kommentargrenze {
+  .KommentarFormular {
    
-        border: 2px solid #C5D8E1; 
-        border-radius: 6px; 
-        background: white; 
+        padding: 10px;
+        width: 400px;
         
     
   }
