@@ -7,36 +7,20 @@
             font-family: "Open-Sans";
         }
        
-.textarea-box {
-    width: 200px;
-    height: 100px;
-    overflow: auto;
-  } 
-
-<<<<<<< Updated upstream
 
 
         
 
-
-
-
-
-
+ 
 
 
 /* Das Untere gehört zum Kommentarbereich*/
   .KommentarFormular {
-=======
-  .legend-kommentargrenze {
->>>>>>> Stashed changes
-   
-        border: 2px solid #C5D8E1; 
-        border-radius: 6px; 
-        background: white; 
+
+   padding: 10px;
+   width: 300px;
     
   }
-<<<<<<< Updated upstream
 /*Ende*/
 
 /* Das Untere gehört zum Kontakt fieldset*/
@@ -57,7 +41,5 @@
     box-shadow: 10px 10px 15px silver;
 }
   
-=======
 
   
->>>>>>> Stashed changes
