@@ -24,9 +24,9 @@
         </a>
       </div>
 
-      <div>
+      <div class="container">
         <form>
-          <fieldset class="kontaktfeld">
+          <fieldset>
             
             <label for="vorname">Vorname</label>
             <input type="text" id="vorname" name="vorname" placeholder="Vorname" maxlength="40" pattern="[A-Za-z]{2,}"> <br>
@@ -35,7 +35,7 @@
             <input type="text" id="nachname" name="nachname" placeholder="Nachname" maxlength="40" pattern="[A-Za-z]{2,}"> <br>
 
             <label for="email">E-Mail-Adresse*</label>
-            <input type="email" id="email" name="email" placeholder="E-Mail" maxlength="40" required> <br>
+            <input type="text" id="email" name="email" placeholder="E-Mail" maxlength="40" required> <br>
 
             <label for="artikelnummer">Artikelnummer</label>
             <input type="text" id="artikelnummer" name="artikelnummer" placeholder="Artikelnummer" maxlength="8" pattern="(([0-9]{7}p)|([a-z]{3})|([0-9]{8}))"> <br>
@@ -46,8 +46,8 @@
             <label for="kategorie">Kategorie</label>
               <select id="kategorie" name="kategorie"> 
                 <option value="" disabled selected>Kategorie</option>
-                <option value="Technologie">Allgemein</option>
-                <option value="Unterhaltung">Bugs & Fixes</option>
+                <option value="Allgemein">Allgemein</option>
+                <option value="Fehler">Bugs & Fixes</option>
                 <option value="Sport">Sport</option>               <!--das muss noch umgeändert werden-->
                 <option value="Politik">Politik</option>           <!--das muss noch umgeändert werden--> 
                 <option value="Sonstiges">Sonstiges</option>       <!--das muss noch umgeändert werden-->
@@ -57,21 +57,33 @@
               <textarea id="beschreibung" name="beschreibung" placeholder="Beschreibung" rows="15" cols="40" maxlength="400" required></textarea> <br>
               
               <em>* Pflichtfelder </em>
-          
-        </div>
-      </form>
-         <div>
-          <fieldset fieldset class="kontaktfeld">
+          </fieldset>
+
+            <fieldset>
+              <form>
+                <div class="form-group">                                              
+                  <input type="reset" value="Formular löschen">                  
+                  <input type="submit" value="Senden">
+                </div>
+              </form>
+            </fieldset>
+        </form>
+       </div>
+      
+       <!--
+       <div class="container">
+        <fieldset>
             <form>
-              <div class="form-group">
+              <div class="form-group">                                              
                 <input type="reset" value="Formular löschen">                  
                 <input type="submit" value="Senden">
               </div>
             </form>
-         </div>
-    
+        </fieldset>
 
+        </div>
 
-
+          -->
+        
     
   </body>
