@@ -1,12 +1,17 @@
-        @font-face {  
-            font-family: "Open-Sans";
-            src: url('../Fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf'); 
+ @font-face {  
+    font-family: "Open-Sans";
+    src: url('../Fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf'); 
+    }
+ *  { 
+    font-family: "Open-Sans";
+    background-color: #F3F5F6;
+ }
 
-        }
-        *   { 
-            font-family: "Open-Sans";
-        }
-       
+
+ /* Das gehört zur Navigationsleiste */
+ .navigation
+
+
 
  
 
