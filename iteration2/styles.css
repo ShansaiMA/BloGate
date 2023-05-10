@@ -7,14 +7,20 @@
     background-color: #F3F5F6;
  }
 
+/* Navigation-Bar */
 
- /* Das gehört zur Navigationsleiste */
- .navigation
+.navigation {
+   background-color: #ffffff; 
+   overflow: hidden;
+}
 
+ .nav_links {
 
+ }
 
- 
+.csa {
 
+}
 
 /* Das Untere gehört zum Kommentarbereich*/
   .KommentarFormular {
