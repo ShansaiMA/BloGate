@@ -65,6 +65,11 @@
    background-color: #fff;
    color: #336699;
  }
+
+ .figurebild { /* Weil die Bilder durch das Figureelement automatisch Zentriert wurden */
+margin-left: auto;
+ }
+
 /* Das Untere gehört zum Kommentarbereich*/
   .KommentarFormular {
 
@@ -91,6 +96,37 @@
     margin: 10px;
     box-shadow: 10px 10px 15px silver;
 }
-  
 
-  
+body { 
+  position: relative;
+  padding-bottom: 52px;
+  min-height: 90vh;
+}
+main {
+  width: 100vw;
+  margin: 0 auto;
+  padding: 30px 20px;
+
+}
+ /* Es besteht noch immmer ein Bug bei Impressum, dass es zur Seite verchoben werden kann, muss gefixt werden. Es wurde vorerst ein Code aus youtube benutzt, 
+ da die Fußzeile nicht ganz unten war, aber der vorherige code war ganz nur ohne das Main und Body von oben und das width unter .footer */
+ 
+ .footer {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right:0;
+   width: 98.8%; 
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 15px;
+   background-color: #F3F5F6;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   }  
+
+ .fußbereich {
+  margin-left: auto;
+  margin-right: auto;
+   } 
+
