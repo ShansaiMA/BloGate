@@ -27,48 +27,59 @@
     </nav>
   </header>
 
-        <form> 
-          <fieldset>
-            
-            <label for="vorname">Vorname</label>
-            <input type="text" id="vorname" name="vorname" placeholder="Vorname" maxlength="40" pattern="[A-Za-z]{2,}"> <br>
-
-            <label for="nachname">Nachname</label>
-            <input type="text" id="nachname" name="nachname" placeholder="Nachname" maxlength="40" pattern="[A-Za-z]{2,}"> <br>
-
-            <label for="email">E-Mail-Adresse*</label>
-            <input type="text" id="email" name="email" placeholder="E-Mail" maxlength="40" required> <br>
-
-            <label for="artikelnummer">Artikelnummer</label>
-            <input type="text" id="artikelnummer" name="artikelnummer" placeholder="Artikelnummer" maxlength="8" pattern="(([0-9]{7}p)|([a-z]{3})|([0-9]{8}))"> <br>
-
-            <label for="betreff">Betreff*</label>
-            <input type="text" id="betreff" name="betreff" placeholder="Betreff" maxlength="40"> <br>
-
-            <label for="kategorie">Kategorie</label>
-              <select id="kategorie" name="kategorie"> 
-                <option value="" disabled selected>Kategorie</option>
-                <option value="Allgemein">Allgemein</option>
-                <option value="Fehler">Bugs & Fixes</option>
-                <option value="Sport">Sport</option>               <!--das muss noch umgeändert werden-->
-                <option value="Politik">Politik</option>           <!--das muss noch umgeändert werden--> 
-                <option value="Sonstiges">Sonstiges</option>       <!--das muss noch umgeändert werden-->
-              </select> <br>
-
-              <label for="beschreibung">Beschreibung*</label>
-              <textarea id="beschreibung" name="beschreibung" placeholder="Beschreibung" rows="15" cols="40" maxlength="400" required></textarea> <br>
-              
-              <em>* Pflichtfelder </em>
-          </fieldset>
-
-          <form>
-            <fieldset>
-                <div class="form-group">                                              
-                  <input type="reset" value="Formular löschen">                  
-                  <input type="submit" value="Senden">
-                </div>
-            </fieldset>
-          </form>      
+  <body>
+    <h2>Kontaktformular</h2>
+    <form>
+      <fieldset>
+      <table>
+        <tr>
+          <td><label for="vorname">Vorname:</label></td>
+          <td><input type="text" id="vorname" name="vorname" placeholder="Vorname" maxlength="40" pattern="[a-zA-Z]{2,}"></td>
+        </tr>
+        <tr>
+          <td><label for="nachname">Nachname:</label></td>
+          <td><input type="text" id="nachname" name="nachname" placeholder="Nachname" maxlength="40" pattern="[a-zA-Z]{2,}"></td>
+        </tr>
+        <tr>
+          <td><label for="email">E-Mail-Adresse*:</label></td>
+          <td><input type="email" id="email" name="email" placeholder="E-Mail" maxlength="40" required></td>
+        </tr>
+        <tr>
+          <td><label for="artikelnummer">Artikelnummer:</label></td>
+          <td><input type="text" id="artikelnummer" name="artikelnummer" placeholder="Artikelnummer" pattern="(?!.*[^0-9pP])[0-9a-fp]{3,8}"></td>
+        </tr>
+        <tr>
+          <td><label for="betreff">Betreff*</label></td>
+          <td><input type="text" id="betreff" name="betreff" placeholder="Betreff" maxlength="40"></td>
+        </tr>
+        <tr>
+          <td><label for="kategorie">Kategorie:</label></td>
+          <td>
+            <select id="kategorie" name="kategorie">
+              <option value="">Bitte auswählen</option>
+              <option value="kategorie1">Kat1</option>  <!--das muss noch umgeändert werden, hab das provisorisch kat1,2,3 genannt--> 
+              <option value="kategorie2">Kat2</option>  <!--das muss noch umgeändert werden-->
+              <option value="kategorie3">Kat3</option>  <!--das muss noch umgeändert werden-->
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="beschreibung">Beschreibung:</label></td>
+          <td><textarea id="beschreibung" name="beschreibung" placeholder="Beschreibung" rows="15" cols="40" maxlength="400"></textarea></td>
+        </tr>
+        <tr>
+           <td><em>* Pflichtfelder </em></td>
+        </tr>
+      </table>
+      </fieldset>
+      <fieldset>
+      <div>
+        <button type="reset">Formular löschen</button>
+        <button type="submit">Senden</button>
+      </div>
+    </fieldset>
+    </form>
+  </body>
 
          <footer class="footer">  
        <div class="fußbereich"> 
