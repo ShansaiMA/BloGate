@@ -7,7 +7,28 @@
     background-color: #F3F5F6;
  }
 
+body { 
+  background: linear-gradient(); /* Noch für Farbe ändern */ 
+  position: relative;
+  padding-bottom: 52px; 
+  min-height: 90vh;
+}
+
+main {
+  width: 100vw;
+  margin: 0 auto; 
+  padding: 30px 20px; 
+}
+/*
+header,
+main,
+footer {
+    margin: 30px auto;
+    width: 80%;
+}  DAS EINFÜGEN FÜR Außenabstand, ggf, anpassen*/ 
+
 /* Navigation-Bar / Changen bis CSA Hover */ 
+
 .header {
    display: flex;
    justify-content: space-between;
@@ -21,7 +42,7 @@
    display: block;
    max-width: 100%;
    height: auto;
-   padding-left: 780px;
+   padding-left: 630px;
  }
 
  .navigation {
@@ -73,14 +94,9 @@ margin-left: auto;
 
 
 #content {
-  width: 80%;
-  margin: auto;
+  width: 80%; 
+  margin: auto; 
 }
-
-
-
-
-
 
 
 
@@ -114,17 +130,7 @@ margin-left: auto;
     box-shadow: 10px 10px 15px silver;
 }
 
-body { 
-  position: relative;
-  padding-bottom: 52px;
-  min-height: 90vh;
-}
-main {
-  width: 100vw;
-  margin: 0 auto;
-  padding: 30px 20px;
 
-}
  /* Es besteht noch immmer ein Bug bei Impressum, dass es zur Seite verchoben werden kann, muss gefixt werden (Bzw. dass die Seite zu breit ist). Es wurde vorerst ein anderer Code benutzt, 
  da die Fußzeile nicht ganz unten war, aber der vorherige code war der selbe nur ohne das Main und Body, von oben und das width unter .footer */
  
@@ -137,7 +143,7 @@ main {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: 15px;
+   padding: 15px; 
    background-color: #F3F5F6;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
    }  
