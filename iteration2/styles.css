@@ -70,6 +70,23 @@
 margin-left: auto;
  }
 
+
+
+#content {
+  width: 80%;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Das Untere gehört zum Kommentarbereich*/
   .KommentarFormular {
 
