@@ -7,8 +7,11 @@
     background-color: #F3F5F6;
  }
 
-body { 
-  background: linear-gradient(); /* Noch für Farbe ändern */ 
+ /* Notes: Verweise von der Navigationsbar noch ändern die Farbe,  Linear gradiant Farbe noch wählen, Anpassen dass bei Seite kleiner machen alles drauf ist, 
+ Verweis Farbe Blau wechseln */
+
+ body { 
+  background: linear-gradient(); /* Noch für Farbe ändern (Weiss mit Grau) */ 
   position: relative;
   padding-bottom: 52px; 
   min-height: 90vh;
@@ -19,13 +22,13 @@ main {
   margin: 0 auto; 
   padding: 30px 20px; 
 }
-/*
-header,
+
+/*header,
 main,
 footer {
     margin: 30px auto;
     width: 80%;
-}  DAS EINFÜGEN FÜR Außenabstand, ggf, anpassen*/ 
+}  DAS EINFÜGEN FÜR Außenabstand, ggf, anpassen */
 
 /* Navigation-Bar / Changen bis CSA Hover */ 
 
@@ -36,14 +39,33 @@ footer {
    padding: 10px;
    background-color: #F3F5F6;
    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+ } 
+
+
+ a {
+  text-decoration: none;
+  color: #336699;         
+ } 
+
+ a :hover {
+  color: rebeccapurple; /* Funktionier tnicht */
+  text-decoration: none;
  }
 
+  
  .logo img {
    display: block;
    max-width: 100%;
    height: auto;
-   padding-left: 630px;
+   padding-left: 620px;
  }
+
+ .logo :hover {
+  margin-left: 15px;
+  transition-property: all;
+  transition-duration: 2s;
+ }
+ 
 
  .navigation {
    display: flex;
@@ -69,7 +91,7 @@ footer {
  }
 
  .nav_links a:hover {
-   color: #336699;
+   color: rebeccapurple;
  }
 
  .csa {
@@ -83,12 +105,12 @@ footer {
  }
 
  .csa:hover {
-   background-color: #fff;
-   color: #336699;
+   background-color: rebeccapurple; 
+   color: #ffffff;
  }
 
  .figurebild { /* Weil die Bilder durch das Figureelement automatisch Zentriert wurden */
-margin-left: auto;
+  margin-left: auto;
  }
 
 
