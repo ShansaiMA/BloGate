@@ -7,11 +7,11 @@
     background-color: #F3F5F6;
  }
 
- /* Notes: Verweise von der Navigationsbar noch ändern die Farbe,  Linear gradiant Farbe noch wählen, Anpassen dass bei Seite kleiner machen alles drauf ist, 
- Verweis Farbe Blau wechseln */
+ /* Notes: Linear gradiant Farbe noch wählen,Mitte noch Farbe ander - Main,Head,Footer anpassen - Anpassen dass bei Seite kleiner machen alles drauf ist, mäßig minimieren
+  - Verweis Farbe Blau wechseln - Impressum Autorenbox Schatten Umrundung - Nachfragen mit innerhalb einer Sekunde, bzw. die Schatten Animation für die Navigationsbar (PDF DATEI) */
 
  body { 
-  background: linear-gradient(); /* Noch für Farbe ändern (Weiss mit Grau) */ 
+  background: linear-gradient(to bottom, #F3F5F6, #eeecec); /* Noch Farbe ändern (Weiss mit Grau), in der Mtite ist die Farbe noch anders neben der Produkttabelle usw. */ 
   position: relative;
   padding-bottom: 52px; 
   min-height: 90vh;
@@ -47,10 +47,11 @@ footer {
   color: #336699;         
  } 
 
- a :hover {
-  color: rebeccapurple; /* Funktionier tnicht */
+  a:hover {
+  color: rebeccapurple; 
   text-decoration: none;
  }
+
 
   
  .logo img {
@@ -65,12 +66,17 @@ footer {
   transition-property: all;
   transition-duration: 2s;
  }
- 
+
+
+
+
+
 
  .navigation {
    display: flex;
    align-items: center;
  }
+
 
  .nav_links {
    list-style: none;
@@ -79,37 +85,51 @@ footer {
    padding: 0;
  }
 
+
  .nav_links li {
    margin-right: 20px;
  }
 
- .nav_links a {
+
+ /* -------------- Navigationslinks in der Nav bar* ------------ */
+ .nav_links a {                              
    text-decoration: none;
-   color: #333;
+   color: #336699;
    font-weight: bold;
-   transition: color 0.3s ease-in-out;
+   transition: box-shadow 1s; /* Animation Schatten */
  }
 
- .nav_links a:hover {
+
+ /* ----------- Navigations Links im Header Hover -------- */
+ .nav_links a:hover {                          
    color: rebeccapurple;
+   box-shadow: 5px 5px 10px #777;
  }
 
- .csa {
+
+ /* ----------- Kontakt Button ---------- */ 
+ .csa { 
    margin-left: 269%;
    text-decoration: none;
    color: #fff;
    background-color: #336699;
    padding: 10px 20px;
    border-radius: 5px;
-   transition: background-color 0.3s ease-in-out;
+   transition: box-shadow 1s; /* Animation Schatten */
  }
 
- .csa:hover {
+
+/* -------------- Kontakt Button Hover ----------- */ 
+ .csa:hover { 
    background-color: rebeccapurple; 
    color: #ffffff;
+   box-shadow: 5px 5px 10px #777; /*  Animation Schatten */
  }
 
- .figurebild { /* Weil die Bilder durch das Figureelement automatisch Zentriert wurden */
+
+
+/* -------- Sodass die Bilder durch Figureelement automatisch Zentriert werden ----------- */
+ .figurebild {     
   margin-left: auto;
  }
 
@@ -125,6 +145,7 @@ footer {
 
 
 
+
 /* Das Untere gehört zum Kommentarbereich*/
   .KommentarFormular {
 
@@ -134,9 +155,8 @@ footer {
   }
 /*Ende*/
 
-/* Das Untere gehört zum Kontakt fieldset*/
 
- /*Ende*/ 
+
 
  
  
@@ -152,10 +172,24 @@ footer {
     box-shadow: 10px 10px 15px silver;
 }
 
-
- /* Es besteht noch immmer ein Bug bei Impressum, dass es zur Seite verchoben werden kann, muss gefixt werden (Bzw. dass die Seite zu breit ist). Es wurde vorerst ein anderer Code benutzt, 
- da die Fußzeile nicht ganz unten war, aber der vorherige code war der selbe nur ohne das Main und Body, von oben und das width unter .footer */
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  .footer {
    position: absolute;
    bottom: 0;
