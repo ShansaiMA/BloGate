@@ -52,7 +52,7 @@
  }
 
  .csa {
-   margin-left: 363%;
+   margin-left: 269%;
    text-decoration: none;
    color: #fff;
    background-color: #336699;
@@ -125,8 +125,8 @@ main {
   padding: 30px 20px;
 
 }
- /* Es besteht noch immmer ein Bug bei Impressum, dass es zur Seite verchoben werden kann, muss gefixt werden. Es wurde vorerst ein Code aus youtube benutzt, 
- da die Fußzeile nicht ganz unten war, aber der vorherige code war ganz nur ohne das Main und Body von oben und das width unter .footer */
+ /* Es besteht noch immmer ein Bug bei Impressum, dass es zur Seite verchoben werden kann, muss gefixt werden (Bzw. dass die Seite zu breit ist). Es wurde vorerst ein anderer Code benutzt, 
+ da die Fußzeile nicht ganz unten war, aber der vorherige code war der selbe nur ohne das Main und Body, von oben und das width unter .footer */
  
  .footer {
    position: absolute;
