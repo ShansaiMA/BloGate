@@ -109,7 +109,7 @@ footer {
 
  /* ----------- Kontakt Button ---------- */ 
  .csa { 
-   margin-left: 269%;
+   margin-left: auto;
    text-decoration: none;
    color: #fff;
    background-color: #336699;
