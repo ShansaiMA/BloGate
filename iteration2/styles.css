@@ -4,19 +4,22 @@
  }
 
  * {
+   box-sizing: border-box;
    font-family: "Open-Sans";
    background-color: #F3F5F6;
  }
 
+
  /* Notes: Linear gradiant Farbe noch wählen,Mitte noch Farbe anders - Main,Head,Footer anpassen - Anpassen dass bei Seite kleiner machen alles drauf ist, mäßig minimieren
-  - Blaue Verweis Farbe wechseln - Impressum Autorenbox Schatten Umrundung - - Kontakt Button nach Rechts verschieben*/
+  - Blaue Verweis Farbe wechseln - Impressum Autorenbox Schatten Umrundung - - Kontakt Button nach Rechts verschieben - border table in CSS reinmachen - Footer klebbt am Viewport
+  - box-shadow von Navigationsbar dicker machen - Seite mittig machen*/
 
  body {
-   background: linear-gradient(90deg, #F3F5F6, #eeecec); /* degree Farbe anpassen */ 
+   background: linear-gradient(90deg, #F3F5F6, #eeecec);
+   /* degree Farbe anpassen */
    /* Noch Farbe ändern (Weiss mit Grau), in der Mtite ist die Farbe noch anders neben der Produkttabelle usw. */
    display: flex;
    flex-direction: column;
-   /* relative ändern */
    min-height: 100vh;
  }
 
@@ -26,12 +29,13 @@
    /* padding: 30px 20px; */
  }
 
- /*header,
-main,
-footer {
-    margin: 30px auto;
-    width: 80%;
-}  DAS EINFÜGEN FÜR Außenabstand, ggf, anpassen */
+ header,
+ main,
+ footer {
+   margin: 30px auto;
+   /* margin-top: max(30px, auto); machen für das obere*/
+   width: 80%;
+ }
 
  /* Navigation-Bar / Changen bis CSA Hover */
 
@@ -73,11 +77,10 @@ footer {
 
 
 
-
-
  .navigation {
    display: flex;
    align-items: center;
+   justify-content: space-between;
  }
 
 
@@ -143,6 +146,7 @@ footer {
 
  #content {
    width: 80%;
+   margin: 30px auto;
    /*margin: auto; */
  }
 
@@ -173,10 +177,8 @@ footer {
  }
 
  .footer {
-   position: fixed;
-   bottom: 0;
-   left: 0;
    width: 100%;
+   margin-top: auto;
    justify-content: space-between;
    align-items: center;
    padding: 15px;
