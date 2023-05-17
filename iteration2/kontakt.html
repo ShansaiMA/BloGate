@@ -1,93 +1,100 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width" />
 
-    <title>Kontakt</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" />
 
-  <body>
-   <div id="content">
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="content">
     <div class="logo">
       <a href="startseite.html">
         <img src="../img/Transparentes Logo.png" alt="Logo der Webseite" width="300">
       </a>
-    </div> 
-  
-<header class="header">
-    <nav class="navigation">
-      <ul class="nav_links">
-        <li><a href="startseite.html">Startseite</a></li>
-        <li><a href="favoriten.html">Favoriten</a></li>
-        <li><a href="impressum.html">Impressum</a></li>
-      </ul>
-      <a class="csa" href="kontakt.html">Kontakt</a>
-    </nav>
-  </header>
+    </div>
 
-  <body>
-    <h2>Kontaktformular</h2>
-    <form>
-      <fieldset>
-      <table>
-        <tr>
-          <td><label for="vorname">Vorname</label></td>
-          <td><input type="text" id="vorname" name="vorname" placeholder="Vorname" maxlength="40" pattern="[a-zA-Z]{2,}"></td>
-        </tr>
-        <tr>
-          <td><label for="nachname">Nachname</label></td>
-          <td><input type="text" id="nachname" name="nachname" placeholder="Nachname" maxlength="40" pattern="[a-zA-Z]{2,}"></td>
-        </tr>
-        <tr>
-          <td><label for="email">E-Mail-Adresse*</label></td>
-          <td><input type="email" id="email" name="email" placeholder="E-Mail" maxlength="40" required></td>
-        </tr>
-        <tr>
-          <td><label for="artikelnummer">Artikelnummer</label></td>
-          <td><input type="text" id="artikelnummer" name="artikelnummer" placeholder="Artikelnummer" pattern= "[a-z]{3}|\d{3}(?:\d{5}|p)|[0-9]{2}p\d{5}"></td>
-        </tr>
-        <tr>
-          <td><label for="betreff">Betreff*</label></td>
-          <td><input type="text" id="betreff" name="betreff" placeholder="Betreff" maxlength="40" required></td>
-        </tr>
-        <tr>
-          <td><label for="kategorie">Kategorie</label></td>
-          <td>
-            <select id="kategorie" name="kategorie">
-              <option value="">Bitte auswählen</option>
-              <option value="kategorie1">Kat1</option>  <!--das muss noch umgeändert werden, hab das provisorisch kat1,2,3 genannt--> 
-              <option value="kategorie2">Kat2</option>  <!--das muss noch umgeändert werden-->
-              <option value="kategorie3">Kat3</option>  <!--das muss noch umgeändert werden-->
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td><label for="beschreibung">Beschreibung*</label></td>
-          <td><textarea id="beschreibung" name="beschreibung" placeholder="Beschreibung" rows="15" cols="40" maxlength="400" required></textarea></td>
-        </tr>
-        <tr>
-           <td><em>* Pflichtfelder </em></td>
-        </tr>
-      </table>
-       <!--<p id="error-message" style="display: none;">Bitte füllen Sie die Pflichtfelder aus.</p> --> <!--mit Java vielleicht ausimplementieren--> 
-      </fieldset>
-      <fieldset>
-      <div>
-        <button type="reset">Formular löschen</button>
-        <button type="submit">Senden</button>
+    <header class="header">
+      <nav class="navigation">
+        <ul class="nav_links">
+          <li><a href="startseite.html">Startseite</a></li>
+          <li><a href="favoriten.html">Favoriten</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+        <a class="csa" href="kontakt.html">Kontakt</a>
+      </nav>
+    </header>
+
+    <body>
+      <h2>Kontaktformular</h2>
+      <form>
+        <fieldset>
+          <table>
+            <tr>
+              <td><label for="vorname">Vorname</label></td>
+              <td><input type="text" id="vorname" name="vorname" placeholder="Vorname" maxlength="40"
+                  pattern="[a-zA-Z]{2,}"></td>
+            </tr>
+            <tr>
+              <td><label for="nachname">Nachname</label></td>
+              <td><input type="text" id="nachname" name="nachname" placeholder="Nachname" maxlength="40"
+                  pattern="[a-zA-Z]{2,}"></td>
+            </tr>
+            <tr>
+              <td><label for="email">E-Mail-Adresse*</label></td>
+              <td><input type="email" id="email" name="email" placeholder="E-Mail" maxlength="40" required></td>
+            </tr>
+            <tr>
+              <td><label for="artikelnummer">Artikelnummer</label></td>
+              <td><input type="text" id="artikelnummer" name="artikelnummer" placeholder="Artikelnummer"
+                  pattern="[a-z]{3}|\d{3}(?:\d{5}|p)|[0-9]{2}p\d{5}"></td>
+            </tr>
+            <tr>
+              <td><label for="betreff">Betreff*</label></td>
+              <td><input type="text" id="betreff" name="betreff" placeholder="Betreff" maxlength="40" required></td>
+            </tr>
+            <tr>
+              <td><label for="kategorie">Kategorie</label></td>
+              <td>
+                <select id="kategorie" name="kategorie">
+                  <option value="">Bitte auswählen</option>
+                  <option value="kategorie1">Kat1</option>
+                  <!--das muss noch umgeändert werden, hab das provisorisch kat1,2,3 genannt-->
+                  <option value="kategorie2">Kat2</option> <!--das muss noch umgeändert werden-->
+                  <option value="kategorie3">Kat3</option> <!--das muss noch umgeändert werden-->
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="beschreibung">Beschreibung*</label></td>
+              <td><textarea id="beschreibung" name="beschreibung" placeholder="Beschreibung" rows="15" cols="40"
+                  maxlength="400" required></textarea></td>
+            </tr>
+            <tr>
+              <td><em>* Pflichtfelder </em></td>
+            </tr>
+          </table>
+          <!--<p id="error-message" style="display: none;">Bitte füllen Sie die Pflichtfelder aus.</p> -->
+          <!--mit Java vielleicht ausimplementieren-->
+        </fieldset>
+        <fieldset>
+          <div>
+            <button type="reset">Formular löschen</button>
+            <button type="submit">Senden</button>
+          </div>
+        </fieldset>
+      </form>
+    </body>
+
+    <footer class="footer">
+      <div class="fußbereich">
+        © Shansai Mahendran, Armend Ukzmaili - 2023
       </div>
-    </fieldset>
-    </form>
-  </body>
-
-         <footer class="footer">  
-       <div class="fußbereich"> 
-      © Shansai Mahendran, Armend Ukzmaili - 2023 
-     </div>
     </footer>
-   </div>
-  </body>
- </html>
+  </div>
+</body>
 
+</html>

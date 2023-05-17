@@ -1,59 +1,62 @@
- @font-face {  
-    font-family: "Open-Sans";
-    src: url('../Fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf'); 
-    }
- *  { 
-    font-family: "Open-Sans";
-    background-color: #F3F5F6;
+ @font-face {
+   font-family: "Open-Sans";
+   src: url('../Fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf');
  }
 
- /* Notes: Linear gradiant Farbe noch wählen,Mitte noch Farbe ander - Main,Head,Footer anpassen - Anpassen dass bei Seite kleiner machen alles drauf ist, mäßig minimieren
-  - Verweis Farbe Blau wechseln - Impressum Autorenbox Schatten Umrundung - Nachfragen mit innerhalb einer Sekunde, bzw. die Schatten Animation für die Navigationsbar (PDF DATEI) */
+ * {
+   font-family: "Open-Sans";
+   background-color: #F3F5F6;
+ }
 
- body { 
-  background: linear-gradient(to bottom, #F3F5F6, #eeecec); /* Noch Farbe ändern (Weiss mit Grau), in der Mtite ist die Farbe noch anders neben der Produkttabelle usw. */ 
-  position: relative;
-  padding-bottom: 52px; 
-  min-height: 90vh;
-}
+ /* Notes: Linear gradiant Farbe noch wählen,Mitte noch Farbe anders - Main,Head,Footer anpassen - Anpassen dass bei Seite kleiner machen alles drauf ist, mäßig minimieren
+  - Blaue Verweis Farbe wechseln - Impressum Autorenbox Schatten Umrundung - - Kontakt Button nach Rechts verschieben*/
 
-main {
-  width: 100vw;
-  margin: 0 auto; 
-  padding: 30px 20px; 
-}
+ body {
+   background: linear-gradient(90deg, #F3F5F6, #eeecec); /* degree Farbe anpassen */ 
+   /* Noch Farbe ändern (Weiss mit Grau), in der Mtite ist die Farbe noch anders neben der Produkttabelle usw. */
+   display: flex;
+   flex-direction: column;
+   /* relative ändern */
+   min-height: 100vh;
+ }
 
-/*header,
+ main {
+   width: 100vw;
+   margin: 0 auto;
+   /* padding: 30px 20px; */
+ }
+
+ /*header,
 main,
 footer {
     margin: 30px auto;
     width: 80%;
 }  DAS EINFÜGEN FÜR Außenabstand, ggf, anpassen */
 
-/* Navigation-Bar / Changen bis CSA Hover */ 
+ /* Navigation-Bar / Changen bis CSA Hover */
 
-.header {
+ .header {
    display: flex;
    justify-content: space-between;
    align-items: center;
    padding: 10px;
    background-color: #F3F5F6;
-   box-shadow: 0 0 10px rgba(0,0,0,0.1);
- } 
-
-
- a {
-  text-decoration: none;
-  color: #336699;         
- } 
-
-  a:hover {
-  color: rebeccapurple; 
-  text-decoration: none;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
  }
 
 
-  
+ a {
+   text-decoration: none;
+   color: #336699;
+ }
+
+ a:hover {
+   color: rebeccapurple;
+   text-decoration: none;
+ }
+
+
+
  .logo img {
    display: block;
    max-width: 100%;
@@ -62,9 +65,9 @@ footer {
  }
 
  .logo :hover {
-  margin-left: 15px;
-  transition-property: all;
-  transition-duration: 2s;
+   margin-left: 15px;
+   transition-property: all;
+   transition-duration: 2s;
  }
 
 
@@ -92,120 +95,96 @@ footer {
 
 
  /* -------------- Navigationslinks in der Nav bar* ------------ */
- .nav_links a {                              
+ .nav_links a {
    text-decoration: none;
    color: #336699;
    font-weight: bold;
-   transition: box-shadow 1s; /* Animation Schatten */
+   transition: box-shadow 1s;
+   /* Animation Schatten */
  }
 
 
  /* ----------- Navigations Links im Header Hover -------- */
- .nav_links a:hover {                          
+ .nav_links a:hover {
    color: rebeccapurple;
    box-shadow: 5px 5px 10px #777;
  }
 
 
- /* ----------- Kontakt Button ---------- */ 
- .csa { 
+ /* ----------- Kontakt Button ---------- */
+ .csa {
    margin-left: auto;
    text-decoration: none;
    color: #fff;
    background-color: #336699;
    padding: 10px 20px;
    border-radius: 5px;
-   transition: box-shadow 1s; /* Animation Schatten */
+   transition: box-shadow 1s;
+   /* Animation Schatten */
  }
 
 
-/* -------------- Kontakt Button Hover ----------- */ 
- .csa:hover { 
-   background-color: rebeccapurple; 
+ /* -------------- Kontakt Button Hover ----------- */
+ .csa:hover {
+   background-color: rebeccapurple;
    color: #ffffff;
-   box-shadow: 5px 5px 10px #777; /*  Animation Schatten */
+   box-shadow: 5px 5px 10px #777;
+   /*  Animation Schatten */
  }
 
 
 
-/* -------- Sodass die Bilder durch Figureelement automatisch Zentriert werden ----------- */
- .figurebild {     
-  margin-left: auto;
+ /* -------- Sodass die Bilder durch Figureelement automatisch Zentriert werden ----------- */
+ .figurebild {
+   margin-left: auto;
  }
 
 
 
-#content {
-  width: 80%; 
-  margin: auto; 
-}
+ #content {
+   width: 80%;
+   /*margin: auto; */
+ }
 
 
 
-
-
-
-
-/* Das Untere gehört zum Kommentarbereich*/
-  .KommentarFormular {
+ /* Das Untere gehört zum Kommentarbereich*/
+ .KommentarFormular {
 
    padding: 10px;
    width: 300px;
-    
-  }
-/*Ende*/
+
+ }
+
+ /*Ende*/
 
 
 
 
- 
- 
+ /*Autorenbox*/
 
-/*Autorenbox*/
-
-.autorenbox {
-    width: 300px;
-    height: 100px;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 10px;
-    box-shadow: 10px 10px 15px silver;
-}
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ .autorenbox {
+   width: 300px;
+   height: 100px;
+   border: 1px solid black;
+   border-radius: 10px;
+   margin: 10px;
+   box-shadow: 10px 10px 15px silver;
+ }
 
  .footer {
-   position: absolute;
+   position: fixed;
    bottom: 0;
    left: 0;
-   right:0;
-   width: 98.8%; 
-   display: flex;
+   width: 100%;
    justify-content: space-between;
    align-items: center;
-   padding: 15px; 
+   padding: 15px;
    background-color: #F3F5F6;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-   }  
+ }
 
  .fußbereich {
-  margin-left: auto;
-  margin-right: auto;
-   } 
-
+   margin-left: auto;
+   margin-right: auto;
+ }
