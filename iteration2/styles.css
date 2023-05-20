@@ -12,7 +12,7 @@
 
  /* Notes: Linear gradiant Farbe noch wählen,Mitte noch Farbe anders - Main,Head,Footer anpassen - Anpassen dass bei Seite kleiner machen alles drauf ist, mäßig minimieren
   - Blaue Verweis Farbe wechseln - Impressum Autorenbox Schatten Umrundung - - Kontakt Button nach Rechts verschieben - border table in CSS reinmachen - Footer klebbt am Viewport
-  - box-shadow von Navigationsbar dicker machen - Seite mittig machen*/
+  - box-shadow von Navigationsbar dicker machen - Seite mittig machen - margin ist auf 8 bei Body*/
 
  body {
    background: linear-gradient(90deg, #F3F5F6, #eeecec);
@@ -47,6 +47,7 @@
    padding: 10px;
    background-color: #F3F5F6;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   /* Margin einfügen/ anpassen, HEader ist zu groß google untersuch tool benutzen */
  }
 
 
