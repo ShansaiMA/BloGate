@@ -12,7 +12,7 @@
 
  /* Notes: Linear gradiant Farbe noch wählen,Mitte noch Farbe anders - Main,Head,Footer anpassen - Anpassen dass bei Seite kleiner machen alles drauf ist, mäßig minimieren
   - Blaue Verweis Farbe wechseln - Impressum Autorenbox Schatten Umrundung - - Kontakt Button nach Rechts verschieben - border table in CSS reinmachen - Footer klebbt am Viewport
-  - box-shadow von Navigationsbar dicker machen - Seite mittig machen - margin ist auf 8 bei Body*/
+  - box-shadow von Navigationsbar dicker machen - Seite mittig machen - margin ist auf 8 bei Body - Logo ist weg*/
 
  body {
    background: linear-gradient(90deg, #F3F5F6, #eeecec);
@@ -61,13 +61,18 @@
    text-decoration: none;
  }
 
-
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #F3F5F6, #eeecec); /* Selbe Farbe wie Body gemacht */
+}
 
  .logo img {
-   display: block;
+  /* display: block; (Entfernt um Logo Bug zu fixen)  */
    max-width: 100%;
    height: auto;
-   padding-left: 620px;
+   /* padding-left: 620px; (Entfernt um Logo Bug zu fixen) */
  }
 
  .logo :hover {
@@ -149,6 +154,7 @@
  #content {
    width: 80%;
    margin: 30px auto;
+   background: linear-gradient(90deg, #F3F5F6, #eeecec); /* Selbe Farbe wie Body gemacht /*
    /*margin: auto; */
  }
 
@@ -187,6 +193,7 @@
    padding: 15px;
    background-color: #F3F5F6;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   text-align: center;
  }
 
  .fußbereich {
