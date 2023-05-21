@@ -9,19 +9,15 @@
    background-color: #F3F5F6;
  }
 
-
- /* Notes: Linear gradiant Farbe noch wählen,Mitte noch Farbe anders - Main,Head,Footer anpassen - Anpassen dass bei Seite kleiner machen alles drauf ist, mäßig minimieren
-  - Blaue Verweis Farbe wechseln - Impressum Autorenbox Schatten Umrundung - - Kontakt Button nach Rechts verschieben - border table in CSS reinmachen - Footer klebbt am Viewport
-  - box-shadow von Navigationsbar dicker machen - Seite mittig machen - margin ist auf 8 bei Body - Logo ist weg*/
+ /* Notes: An manchen Stellen ist die Farbe anders (z.B Figurelement) -  Anpassen dass bei Seite kleiner machen alles drauf ist, mäßig minimieren - Blaue Verweis Farbe wechseln  */
 
  body {
    background: linear-gradient(90deg, #F3F5F6, #eeecec);
-   /* degree Farbe anpassen */
    /* Noch Farbe ändern (Weiss mit Grau), in der Mtite ist die Farbe noch anders neben der Produkttabelle usw. */
    display: flex;
    flex-direction: column;
    min-height: 100vh;
-   margin: 0 auto; 
+   margin: 0 auto;
  }
 
  main {
@@ -41,13 +37,13 @@
  /* Navigation-Bar / Changen bis CSA Hover */
 
  .header {
-   display: flex;
+   display: block;
+   /* display: flex;
    justify-content: space-between;
-   align-items: center;
+   align-items: center; (Kontaktbutton Bug, nicht nach Rechts verschoben */
    padding: 10px;
    background-color: #F3F5F6;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-   /* Margin einfügen/ anpassen, HEader ist zu groß google untersuch tool benutzen */
  }
 
 
@@ -61,15 +57,16 @@
    text-decoration: none;
  }
 
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(90deg, #F3F5F6, #eeecec); /* Selbe Farbe wie Body gemacht */
-}
+ .logo {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: linear-gradient(90deg, #F3F5F6, #eeecec);
+   /* Selbe Farbe wie Body gemacht */
+ }
 
  .logo img {
-  /* display: block; (Entfernt um Logo Bug zu fixen)  */
+   /* display: block; (Entfernt um Logo Bug zu fixen)  */
    max-width: 100%;
    height: auto;
    /* padding-left: 620px; (Entfernt um Logo Bug zu fixen) */
@@ -111,6 +108,8 @@
    font-weight: bold;
    transition: box-shadow 1s;
    /* Animation Schatten */
+   padding: 3px 8px;
+   /* Für den ,,Rahmen" beim hover */
  }
 
 
@@ -150,15 +149,26 @@
  }
 
 
+ /* Design für Tabellen */
+ .artikel_tabelle {
+   border-collapse: collapse;
+   border: 1px solid black;
+ }
+
+ .artikel_tabelle th,
+ .artikel_tabelle td {
+   border: 1px solid black;
+   padding: 8px;
+ }
+
 
  #content {
    width: 80%;
    margin: 30px auto;
-   background: linear-gradient(90deg, #F3F5F6, #eeecec); /* Selbe Farbe wie Body gemacht /*
+   background: linear-gradient(90deg, #F3F5F6, #eeecec);
+   /* Selbe Farbe wie Body gemacht */
    /*margin: auto; */
  }
-
-
 
  /* Das Untere gehört zum Kommentarbereich*/
  .KommentarFormular {
@@ -167,10 +177,6 @@
    width: 300px;
 
  }
-
- /*Ende*/
-
-
 
 
  /*Autorenbox*/
