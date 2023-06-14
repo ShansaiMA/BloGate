@@ -107,8 +107,9 @@
     <strong> Themenbereich:</strong> Dragon Ball Budokai Tenkaichi, Gaming,
     Anime, Bandai Namco <br />
     <br />
-    <button id="Favoritenbutton" onclick="zuFavoritenHinzufuegen()">     <!-- ID gesetzt auf Favoritenbutton davor ohne id-->
-      <span>&#x2764;</span> Zu Favoriten hinzufügen </button>   <!-- Favoritenbutton!!!-->
+    <button id="Favoritenbutton">
+      <span>&#x2764;</span> Zu Favoriten hinzufügen
+    </button>
     <br />
     <br />
     Anzahl Personen, die den Blog-Artikel zu ihrer Favoritenliste hinzugefügt
@@ -155,5 +156,24 @@
 
   <script src="./js/counter.js"></script>
   <script src="./js/favoriten.js"></script>
+
+  <script>
+    const artikel = {
+      titel: 'Das neue Dragon Ball Z Budokai Tenkaichi 4: Nach 16 Jahren folgen endlich wieder Prügeleien',
+      autor: 'Racix',
+      url: 'artikel2.html',
+      bild_url: 'Super Saya...',
+      date: '06.03.2023',
+
+    }
+
+    const favoritenButton = document.getElementById('Favoritenbutton');
+    favoritenButton.addEventListener('click', () => {
+      // Speichern der Artikelinformationen im Local Storage
+      localStorage.setItem('favorit2', JSON.stringify(artikel));
+    });
+
+  </script>
 </body>
+
 </html>
