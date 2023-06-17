@@ -13,14 +13,6 @@
   <meta name="favcount" content="Anzahl Personen, die den Blog-Artikel zu ihrer Favoritenliste hinzugefügt haben" />
   <meta name="readtime" content="Durchschnittliche Lesezeit" />
 
-  <!-- <script>
-    function addToFavorites() {
-      var favCount = document.getElementById("fav-count");
-      var count = parseInt(favCount.textContent);       auskommentiert weil das hatten wir vor der Iteration 3 gemacht
-      favCount.textContent = count + 1;
-    }
-  </script> -->
-
   <title>Das neue Dragon Ball Z Budokai Tenkaichi 4</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -192,7 +184,7 @@
         localStorage.setItem('favoriten', JSON.stringify(updatedFavoriten));
 
         // Ändern des Button-Textes auf "Favorit entfernen"
-        favoritenButton.textContent = '\u2764 Zu Favoriten hinzufügen'; //Das Herzsymbol ist leider nicht mehr da
+        favoritenButton.textContent = '\u2764 Zu Favoriten hinzufügen';
       }
     });
 

@@ -64,7 +64,7 @@
       // Neue Tabellenzeile erstellen
       const row = document.createElement('tr');
 
-
+      //Titelzelle
       const titelCell = document.createElement('td');
       const artikelLink = document.createElement('a');
       artikelLink.href = favorit.url;
@@ -73,17 +73,11 @@
       titelCell.appendChild(artikelLink);
       row.appendChild(titelCell);
 
+      //Autorzelle
       const autorCell = document.createElement('td');
       autorCell.textContent = favorit.autor;
       row.appendChild(autorCell);
 
-      // const bildCell = document.createElement('td');
-      // const bildVorschau = document.createElement('img');
-      // bildVorschau.src = favorit.bild_url;
-      // bildVorschau.alt = 'Bildvorschau';
-      // bildVorschau.style.maxWidth = '100px';
-      // bildCell.appendChild(bildVorschau);
-      // row.appendChild(bildCell);
 
       // Bildzelle
       const bildCell = document.createElement('td');

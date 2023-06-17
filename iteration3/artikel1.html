@@ -15,13 +15,7 @@
   <meta name="category" content="Themenbereich" />
   <meta name="favcount" content="Anzahl Personen, die den Blog-Artikel zu ihrer Favoritenliste hinzugefügt haben" />
   <meta name="readtime" content="Durchschnittliche Lesezeit" />
-  <script>
-    function addToFavorites() {
-      var favCount = document.getElementById("fav-count");
-      var count = parseInt(favCount.textContent);
-      favCount.textContent = count + 1;
-    }
-  </script>
+  
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -155,28 +149,6 @@
     }
 
 
-    //     const favoritenButton = document.getElementById('Favoritenbutton');
-    // favoritenButton.addEventListener('click', () => {
-    //   // Überprüfen, ob bereits Favoriten im localStorage gespeichert sind
-    //   const favoriten = JSON.parse(localStorage.getItem('favoriten')) || [];
-
-    //   // Überprüfen, ob der aktuelle Artikel bereits in den Favoriten vorhanden ist
-    //   const artikelExists = favoriten.some((favorit) => favorit.url === artikel1.url);
-
-    //   if (!artikelExists) {
-    //     // Hinzufügen des aktuellen Artikels zu den Favoriten
-    //     favoriten.push(artikel1);
-
-    //     // Aktualisierte Favoriten im localStorage speichern
-    //     localStorage.setItem('favoriten', JSON.stringify(favoriten));
-
-    //     // Ändern des Button-Textes auf "Ist Favorit"
-    //     favoritenButton.textContent = 'Artikel ist Favorit';
-    //   } else {
-    //     console.log('Der Artikel ist bereits in den Favoriten vorhanden.');
-    //   }
-    // });
-
     const favoritenButton = document.getElementById('Favoritenbutton');
     favoritenButton.addEventListener('click', () => {
       // Überprüfen, ob bereits Favoriten im localStorage gespeichert sind
@@ -202,7 +174,7 @@
         localStorage.setItem('favoriten', JSON.stringify(updatedFavoriten));
 
         // Ändern des Button-Textes auf "Favorit entfernen"
-        favoritenButton.textContent = '\u2764 Zu Favoriten hinzufügen'; //Das Herzsymbol ist leider nicht mehr da
+        favoritenButton.textContent = '\u2764 Zu Favoriten hinzufügen';
       }
     });
 
