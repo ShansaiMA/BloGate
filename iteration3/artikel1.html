@@ -95,7 +95,7 @@
 
     <strong> Themenbereich:</strong> Gaming, GTA 6, Leaks, Release <br />
     <br />
-    <button class="button" onclick="addToFavorites()">
+    <button class="button" id="Favoritenbutton">
       <span class="emojis">&#x2764;</span> Zu Favoriten hinzufügen
     </button>
     <p>
@@ -144,6 +144,24 @@
 
   <script src="./js/counter.js"></script>
   <script src="./js/favoriten.js"></script>
+
+  <script>
+    const artikel = {
+      titel: 'Die Gerüchte Küche brodelt: GTA 6 noch vor dem 17. Mai 2023?',
+      autor: 'Armend Ukzmaili',
+      url: 'artikel1.html',
+      bild_url: '.../Artikel 1.jpeg',
+      date: '24.04.2023',
+
+    }
+
+    const favoritenButton = document.getElementById('Favoritenbutton');
+    favoritenButton.addEventListener('click', () => {
+      // Speichern der Artikelinformationen im Local Storage
+      localStorage.setItem('favorit', JSON.stringify(artikel));
+    });
+
+  </script>
 </body>
 
 </html>

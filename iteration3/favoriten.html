@@ -38,25 +38,14 @@
           <th class="ÜberschriftenLeiste-tr">Löschen</th>
         </tr>
       </thead>
-      <tbody id="favoriten-artikel">   <!-- <tbody id= Gesamt-Artikel> --->   <!-- DER SOLL EIGENTLICH KEINE TR-ZEILEN MEHR HABEN, also nur ID bei tbody-->
-
-        
-        <!-- <tr>  
-          <td id="titel">     <a href="artikel1.html">Die Gerüchte Küche brodelt: GTA 6 noch vor dem <time>17. Mai 2023? </time> </a>     </td>
-          <td id="autor">       Armo                                                                                                      </td> 
-          <td id="bild_url">   <img src="../img/Artikel Fotos/Artikel 1.jpeg" alt="Grand Theft Auto Banner" width="100">                  </td>
-          <td id="datum">    <time>24.04.2023</time>                                                                                      </td>
-          <td id="loesch-button">   <button onclick="vonFavoritenEntfernen(this)"><span>&#128465;</span> Artikel entfernen</button>       </td>
-        </tr> -->
-
-        <!-- <tr>  -->
-          <!-- <td><a href="artikel1.html">Die Gerüchte Küche brodelt: GTA 6 noch vor dem <time>17. Mai 2023? </time> </a>
-          </td>
-          <td>Armo</td>
-          <td><img src="../img/Artikel Fotos/Artikel 1.jpeg" alt="Profilbild von Armo" width="100"></td>
-          <td><time>24.04.2023</time></td>
-          <td><button onclick="vonFavoritenEntfernen(this)"><span>&#128465;</span> Artikel entfernen</button></td> -->
-        <!-- </tr> -->
+      <tbody id="tbodyinhalt">
+        <tr>
+          <td id="titel"> <!--<a href="artikel1.html">Die Gerüchte Küche brodelt: GTA 6 noch vor dem <time>17. Mai 2023? </time> </a> --></td>
+          <td id="autor"> <!--Armo--></td> 
+          <td id="bildurl"><!--<img src="../img/Artikel Fotos/Artikel 1.jpeg" alt="Grand Theft Auto Banner" width="100">--></td>
+          <td id="datum"><!--<time>24.04.2023</time>--></td>
+          <td id="loesch-button"><!--<button onclick="deleteArticle(this)"><span>&#128465;</span> Artikel entfernen</button>--></td>
+        </tr>
         <!-- <tr>
           <td><a href="artikel2.html">Das neue Dragon Ball Z Budokai Tenkaichi 4:<br> Nach 16 Jahren folgen endlich
               wieder Prügeleien</a></td>
@@ -70,6 +59,8 @@
         </tr> -->
       </tbody>
     </table>
+
+    
 
     <script>
       function vonFavoritenEntfernen(artikel) {
