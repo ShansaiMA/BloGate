@@ -39,33 +39,16 @@
         </tr>
       </thead>
       <tbody id="tbodyinhalt">
-        <tr>
-          <td id="titel"> <!--<a href="artikel1.html">Die Gerüchte Küche brodelt: GTA 6 noch vor dem <time>17. Mai 2023? </time> </a> --></td>
-          <td id="autor"> <!--Armo--></td> 
-          <td id="bildurl"><!--<img src="../img/Artikel Fotos/Artikel 1.jpeg" alt="Grand Theft Auto Banner" width="100">--></td>
-          <td id="datum"><!--<time>24.04.2023</time>--></td>
-          <td id="loesch-button"><!--<button onclick="deleteArticle(this)"><span>&#128465;</span> Artikel entfernen</button>--></td>
-        </tr>
-        <!-- <tr>
-          <td><a href="artikel2.html">Das neue Dragon Ball Z Budokai Tenkaichi 4:<br> Nach 16 Jahren folgen endlich
-              wieder Prügeleien</a></td>
-          <td>Racix</td>
-          <td><img src="../img/Artikel Fotos/Super Saiyajin Blue - Budokai Tenkaichi.png" alt="Hauptbild Dragon Ball"
-              width="100"></td>
-          <td><time>06.03.2023</time></td>
-
-          <td><button onclick="vonFavoritenEntfernen(this)"><span>&#128465;</span> Artikel entfernen</button></td>
-          Vorerst auskommentiert, damit da die Artikel hinkommen, die mithilfe vom LocalStorage gepusht werden
-        </tr> -->
+      
       </tbody>
     </table>
 
     
 
     <script>
-      function vonFavoritenEntfernen(artikel) {
+      function deleteArticle(button) {
         const row = button.parentNode.parentNode;
-        row.parentNode.removeChild(row);          // Erstmal noch drinne gelassen für später vielleicht
+        row.parentNode.removeChild(row);
       }
     </script> 
   </div>
@@ -76,8 +59,101 @@
     </div>
   </footer>
 
-<!--------------------------------------------------------------Testen-------------------------------------------------------------------------->
+  <script> 
 
+const favoriten = JSON.parse(localStorage.getItem('favoriten')) || [];
+
+// Tabellelement auswählen
+const tbody = document.getElementById('tbodyinhalt');
+
+// Schleife durch die Favoriten-Array
+favoriten.forEach((favorit) => {
+  // Neue Tabellenzeile erstellen
+  const row = document.createElement('tr');
+
+ 
+  const titelCell = document.createElement('td');
+        const artikelLink = document.createElement('a');
+        artikelLink.href = favorit.url;
+        artikelLink.textContent = favorit.titel;
+        titelCell.appendChild(artikelLink);
+        row.appendChild(titelCell);
+
+  const autorCell = document.createElement('td');
+  autorCell.textContent = favorit.autor;
+  row.appendChild(autorCell);
+
+  const bildCell = document.createElement('td');
+  const bildVorschau = document.createElement('img');
+  bildVorschau.src = favorit.bild_url;
+  bildVorschau.alt = 'Bildvorschau';
+  bildVorschau.style.maxWidth = '100px';
+  bildCell.appendChild(bildVorschau);
+  row.appendChild(bildCell);
+
+  const datumCell = document.createElement('td');
+  datumCell.textContent = favorit.datum;
+  row.appendChild(datumCell);
+
+
+
+
+
+// Löschen-Button
+// const loeschenCell = document.createElement('td');
+//         const loeschenButton = document.createElement('button');
+//         loeschenButton.textContent = 'Löschen';
+//         loeschenButton.addEventListener('click', () => {
+//           // Löschen des Favoriten aus dem Local Storage
+//           localStorage.removeItem('favorit2');
+//           // Entfernen der Favoritenzeile aus der Tabelle
+//           loeschenButton.closest('tr').remove();
+//         });
+//         loeschenCell.appendChild(loeschenButton);
+//         row.appendChild(loeschenCell);
+
+//   // Tabellenzeile zur Tabelle hinzufügen
+//   tbody.appendChild(row);
+
+const deleteCell = document.createElement('td');
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = 'Löschen';
+  deleteButton.addEventListener('click', () => {
+    // Funktion zum Entfernen des Artikels aus den Favoriten
+    removeFromFavorites(favorit);
+
+    // Entfernen der Tabellenzeile aus der Tabelle
+    tbody.removeChild(row);
+  });
+  deleteCell.appendChild(deleteButton);
+  row.appendChild(deleteCell);
+
+  // ...
+
+  // Tabellenzeile zur Tabelle hinzufügen
+  tbody.appendChild(row);
+});
+
+function removeFromFavorites(favorit) {
+  // Favoriten aus dem localStorage abrufen
+  const favoriten = JSON.parse(localStorage.getItem('favoriten')) || [];
+
+  // Index des zu entfernenden Favoriten finden
+  const index = favoriten.findIndex((item) => item.url === favorit.url);
+
+  if (index !== -1) {
+    // Favoriten aus dem Array entfernen
+    favoriten.splice(index, 1);
+
+    // Aktualisierte Favoriten im localStorage speichern
+    localStorage.setItem('favoriten', JSON.stringify(favoriten));
+  }
+}
+
+
+
+
+  </script>
 </body>
 
 </html>

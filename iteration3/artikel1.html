@@ -146,20 +146,50 @@
   <script src="./js/favoriten.js"></script>
 
   <script>
-    const artikel = {
+    const artikel1 = {
       titel: 'Die Gerüchte Küche brodelt: GTA 6 noch vor dem 17. Mai 2023?',
       autor: 'Armend Ukzmaili',
       url: 'artikel1.html',
-      bild_url: '.../Artikel 1.jpeg',
-      date: '24.04.2023',
-
+      bild_url: '/img/Artikel Fotos/Artikel 1.jpeg',
+      datum: '24.04.2023'
     }
 
+
+
+    // const favoritenButton = document.getElementById('Favoritenbutton');
+    // favoritenButton.addEventListener('click', () => {
+    //   // Überprüfen, ob bereits Favoriten im localStorage gespeichert sind
+    //   const favoriten = JSON.parse(localStorage.getItem('favoriten')) || [];
+
+    //   // Hinzufügen des aktuellen Artikels zu den Favoriten
+    //   favoriten.push(artikel1);
+
+    //   // Aktualisierte Favoriten im localStorage speichern
+    //   localStorage.setItem('favoriten', JSON.stringify(favoriten));
+    // });
     const favoritenButton = document.getElementById('Favoritenbutton');
-    favoritenButton.addEventListener('click', () => {
-      // Speichern der Artikelinformationen im Local Storage
-      localStorage.setItem('favorit', JSON.stringify(artikel));
-    });
+favoritenButton.addEventListener('click', () => {
+  // Überprüfen, ob bereits Favoriten im localStorage gespeichert sind
+  const favoriten = JSON.parse(localStorage.getItem('favoriten')) || [];
+
+  // Überprüfen, ob der aktuelle Artikel bereits in den Favoriten vorhanden ist
+  const artikelExists = favoriten.some((favorit) => favorit.url === artikel1.url);
+
+  if (!artikelExists) {
+    // Hinzufügen des aktuellen Artikels zu den Favoriten
+    favoriten.push(artikel1);
+
+    // Aktualisierte Favoriten im localStorage speichern
+    localStorage.setItem('favoriten', JSON.stringify(favoriten));
+
+    // Ändern des Button-Textes auf "Ist Favorit"
+    favoritenButton.textContent = 'Artikel ist Favorit';
+  } else {
+    console.log('Der Artikel ist bereits in den Favoriten vorhanden.');
+  }
+});
+
+
 
   </script>
 </body>

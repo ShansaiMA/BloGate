@@ -157,35 +157,38 @@
 
   <!-- --------------------------------------------------Testen!!!!!!!-------------------------------------------------------------------------------------->
   <script>
-    // Die ID "favoritenbutton" wird als eine Variable gespeichert
-    let favoritenbutton = document.getElementById('favoritenbutton');
-    // mit dem addEventListener wird mit dem "click" Ereignis, also beim anklicken, artikel2 aufgerufen
-    favoritenbutton.addEventListener("click", artikel2);
-
-    function artikel2() { 
-      // Definition des Obj artikel2 mit Eigenschaften
-      const artikel2 = {
-        titel: 'Das neue Dragon Ball Z Budokai Tenkaichi 4: Nach 16 Jahren folgen endlich wieder Prügeleien',
-        autor: 'Racix',
-        bild_url: 'Super Saiyajin Blue - Budokai Tenkaichi.png',
-        datum: '06.03.2023',
-        url: 'artikel2.html',
-        // id: "Gesamt-Artikel"
-        // ggf. weitere Attribute ...
-      };
-      zuFavoritenHinzufuegen(artikel2); 
-      // die Seite wird beim hinzufügen des Artikels neugeladen
-      window.location.reload();
+    const artikel2 = {
+      titel: 'Das neue Dragon Ball Z Budokai Tenkaichi 4: Nach 16 Jahren folgen endlich wieder Prügeleien',
+      autor: 'Racix',
+      url: 'artikel2.html',
+      bild_url: '/img/Artikel Fotos/Super Saiyajin Blue - Budokai Tenkaichi.png',
+      datum: '06.03.2023'
     }
-    // document.getElementById('favoritenbutton').addEventListener('click', function () {
-    //   if (istFavorit(artikel2)) {
-    //     entfernenVonFavoriten(artikel2);
-    //     favoritenbutton.textContent ='zu Favoriten hinzufügen';
-    //   } else {
-    //     zuFavoritenHinzufuegen(artikel2);
-    //     favoritenbutton.textContent = 'Artikel ist ein Favorit';
-    // }
-    // });
+
+
+    const favoritenButton = document.getElementById('Favoritenbutton');
+favoritenButton.addEventListener('click', () => {
+  // Überprüfen, ob bereits Favoriten im localStorage gespeichert sind
+  const favoriten = JSON.parse(localStorage.getItem('favoriten')) || [];
+
+  // Überprüfen, ob der aktuelle Artikel bereits in den Favoriten vorhanden ist
+  const artikelExists = favoriten.some((favorit) => favorit.url === artikel2.url);
+
+  if (!artikelExists) {
+    // Hinzufügen des aktuellen Artikels zu den Favoriten
+    favoriten.push(artikel2);
+
+    // Aktualisierte Favoriten im localStorage speichern
+    localStorage.setItem('favoriten', JSON.stringify(favoriten));
+
+    // Ändern des Button-Textes auf "Ist Favorit"
+    favoritenButton.textContent = 'Artikel ist Favorit';
+  } else {
+    console.log('Der Artikel ist bereits in den Favoriten vorhanden.');
+  }
+});
+
+
   </script>
 </body>
 
