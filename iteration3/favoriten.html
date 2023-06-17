@@ -87,18 +87,15 @@
 
       // Bildzelle
       const bildCell = document.createElement('td');
-
       // Link zur Artikelseite für das Bild
       const bildLink = document.createElement('a');
       bildLink.href = favorit.url; // Verwendet den Artikel-URL aus den Favoriten
       bildLink.target = '_blank'; // Öffnet den Link in einem neuen Tab
-
       // Bildvorschau
       const bildVorschau = document.createElement('img');
       bildVorschau.src = favorit.bild_url;
       bildVorschau.alt = 'Bildvorschau';
       bildVorschau.style.maxWidth = '100px';
-
       // Das Bild zur Artikelseite verlinken
       bildLink.appendChild(bildVorschau);
       bildCell.appendChild(bildLink);
@@ -109,30 +106,12 @@
       row.appendChild(datumCell);
 
 
-
-
-
-      // Löschen-Button
-      // const loeschenCell = document.createElement('td');
-      //         const loeschenButton = document.createElement('button');
-      //         loeschenButton.textContent = 'Löschen';
-      //         loeschenButton.addEventListener('click', () => {
-      //           // Löschen des Favoriten aus dem Local Storage
-      //           localStorage.removeItem('favorit2');
-      //           // Entfernen der Favoritenzeile aus der Tabelle
-      //           loeschenButton.closest('tr').remove();
-      //         });
-      //         loeschenCell.appendChild(loeschenButton);
-      //         row.appendChild(loeschenCell);
-
-      //   // Tabellenzeile zur Tabelle hinzufügen
-      //   tbody.appendChild(row);
-
+      //Lösch-Button
       const deleteCell = document.createElement('td');
       const deleteButton = document.createElement('button');
       deleteButton.textContent = 'Löschen';
       deleteButton.addEventListener('click', () => {
-        // Funktion zum Entfernen des Artikels aus den Favoriten
+        // Entfernen des Artikels aus Favoriten
         removeFromFavorites(favorit);
 
         // Entfernen der Tabellenzeile aus der Tabelle
