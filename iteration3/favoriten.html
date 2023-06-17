@@ -39,11 +39,11 @@
         </tr>
       </thead>
       <tbody id="tbodyinhalt">
-      
+
       </tbody>
     </table>
 
-  
+
   </div>
 
   <footer class="footer">
@@ -52,96 +52,116 @@
     </div>
   </footer>
 
-  <script> 
+  <script>
 
-const favoriten = JSON.parse(localStorage.getItem('favoriten')) || [];
+    const favoriten = JSON.parse(localStorage.getItem('favoriten')) || [];
 
-// Tabellelement auswählen
-const tbody = document.getElementById('tbodyinhalt');
+    // Tabellelement auswählen
+    const tbody = document.getElementById('tbodyinhalt');
 
-// Schleife durch die Favoriten-Array
-favoriten.forEach((favorit) => {
-  // Neue Tabellenzeile erstellen
-  const row = document.createElement('tr');
-
- 
-  const titelCell = document.createElement('td');
-        const artikelLink = document.createElement('a');
-        artikelLink.href = favorit.url;
-        artikelLink.textContent = favorit.titel;
-        titelCell.appendChild(artikelLink);
-        row.appendChild(titelCell);
-
-  const autorCell = document.createElement('td');
-  autorCell.textContent = favorit.autor;
-  row.appendChild(autorCell);
-
-  const bildCell = document.createElement('td');
-  const bildVorschau = document.createElement('img');
-  bildVorschau.src = favorit.bild_url;
-  bildVorschau.alt = 'Bildvorschau';
-  bildVorschau.style.maxWidth = '100px';
-  bildCell.appendChild(bildVorschau);
-  row.appendChild(bildCell);
-
-  const datumCell = document.createElement('td');
-  datumCell.textContent = favorit.datum;
-  row.appendChild(datumCell);
+    // Schleife durch die Favoriten-Array
+    favoriten.forEach((favorit) => {
+      // Neue Tabellenzeile erstellen
+      const row = document.createElement('tr');
 
 
+      const titelCell = document.createElement('td');
+      const artikelLink = document.createElement('a');
+      artikelLink.href = favorit.url;
+      artikelLink.textContent = favorit.titel;
+      artikelLink.target = '_blank'; // Neuer Tab wird geöffnet, sobald der Link angeklickt wird
+      titelCell.appendChild(artikelLink);
+      row.appendChild(titelCell);
+
+      const autorCell = document.createElement('td');
+      autorCell.textContent = favorit.autor;
+      row.appendChild(autorCell);
+
+      // const bildCell = document.createElement('td');
+      // const bildVorschau = document.createElement('img');
+      // bildVorschau.src = favorit.bild_url;
+      // bildVorschau.alt = 'Bildvorschau';
+      // bildVorschau.style.maxWidth = '100px';
+      // bildCell.appendChild(bildVorschau);
+      // row.appendChild(bildCell);
+
+      // Bildzelle
+      const bildCell = document.createElement('td');
+
+      // Link zur Artikelseite für das Bild
+      const bildLink = document.createElement('a');
+      bildLink.href = favorit.url; // Verwendet den Artikel-URL aus den Favoriten
+      bildLink.target = '_blank'; // Öffnet den Link in einem neuen Tab
+
+      // Bildvorschau
+      const bildVorschau = document.createElement('img');
+      bildVorschau.src = favorit.bild_url;
+      bildVorschau.alt = 'Bildvorschau';
+      bildVorschau.style.maxWidth = '100px';
+
+      // Das Bild zur Artikelseite verlinken
+      bildLink.appendChild(bildVorschau);
+      bildCell.appendChild(bildLink);
+      row.appendChild(bildCell);
+
+      const datumCell = document.createElement('td');
+      datumCell.textContent = favorit.datum;
+      row.appendChild(datumCell);
 
 
 
-// Löschen-Button
-// const loeschenCell = document.createElement('td');
-//         const loeschenButton = document.createElement('button');
-//         loeschenButton.textContent = 'Löschen';
-//         loeschenButton.addEventListener('click', () => {
-//           // Löschen des Favoriten aus dem Local Storage
-//           localStorage.removeItem('favorit2');
-//           // Entfernen der Favoritenzeile aus der Tabelle
-//           loeschenButton.closest('tr').remove();
-//         });
-//         loeschenCell.appendChild(loeschenButton);
-//         row.appendChild(loeschenCell);
 
-//   // Tabellenzeile zur Tabelle hinzufügen
-//   tbody.appendChild(row);
 
-const deleteCell = document.createElement('td');
-  const deleteButton = document.createElement('button');
-  deleteButton.textContent = 'Löschen';
-  deleteButton.addEventListener('click', () => {
-    // Funktion zum Entfernen des Artikels aus den Favoriten
-    removeFromFavorites(favorit);
+      // Löschen-Button
+      // const loeschenCell = document.createElement('td');
+      //         const loeschenButton = document.createElement('button');
+      //         loeschenButton.textContent = 'Löschen';
+      //         loeschenButton.addEventListener('click', () => {
+      //           // Löschen des Favoriten aus dem Local Storage
+      //           localStorage.removeItem('favorit2');
+      //           // Entfernen der Favoritenzeile aus der Tabelle
+      //           loeschenButton.closest('tr').remove();
+      //         });
+      //         loeschenCell.appendChild(loeschenButton);
+      //         row.appendChild(loeschenCell);
 
-    // Entfernen der Tabellenzeile aus der Tabelle
-    tbody.removeChild(row);
-  });
-  deleteCell.appendChild(deleteButton);
-  row.appendChild(deleteCell);
+      //   // Tabellenzeile zur Tabelle hinzufügen
+      //   tbody.appendChild(row);
 
-  // ...
+      const deleteCell = document.createElement('td');
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Löschen';
+      deleteButton.addEventListener('click', () => {
+        // Funktion zum Entfernen des Artikels aus den Favoriten
+        removeFromFavorites(favorit);
 
-  // Tabellenzeile zur Tabelle hinzufügen
-  tbody.appendChild(row);
-});
+        // Entfernen der Tabellenzeile aus der Tabelle
+        tbody.removeChild(row);
+      });
+      deleteCell.appendChild(deleteButton);
+      row.appendChild(deleteCell);
 
-function removeFromFavorites(favorit) {
-  // Favoriten aus dem localStorage abrufen
-  const favoriten = JSON.parse(localStorage.getItem('favoriten')) || [];
+      // ...
 
-  // Index des zu entfernenden Favoriten finden
-  const index = favoriten.findIndex((item) => item.url === favorit.url);
+      // Tabellenzeile zur Tabelle hinzufügen
+      tbody.appendChild(row);
+    });
 
-  if (index !== -1) {
-    // Favoriten aus dem Array entfernen
-    favoriten.splice(index, 1);
+    function removeFromFavorites(favorit) {
+      // Favoriten aus dem localStorage abrufen
+      const favoriten = JSON.parse(localStorage.getItem('favoriten')) || [];
 
-    // Aktualisierte Favoriten im localStorage speichern
-    localStorage.setItem('favoriten', JSON.stringify(favoriten));
-  }
-}
+      // Index des zu entfernenden Favoriten finden
+      const index = favoriten.findIndex((item) => item.url === favorit.url);
+
+      if (index !== -1) {
+        // Favoriten aus dem Array entfernen
+        favoriten.splice(index, 1);
+
+        // Aktualisierte Favoriten im localStorage speichern
+        localStorage.setItem('favoriten', JSON.stringify(favoriten));
+      }
+    }
 
 
 
