@@ -9,7 +9,8 @@
   background-color: #f3f5f6;
 }
 
-/* Notes: An manchen Stellen ist die Farbe anders (z.B Figurelement) -  Anpassen dass bei Seite kleiner machen alles drauf ist, mäßig minimieren - Blaue Verweis Farbe wechseln  */
+/* Notes: An manchen Stellen ist die Farbe anders (z.B Figurelement) -  Anpassen dass bei Seite kleiner machen alles drauf ist, mäßig minimieren - Blaue Verweis Farbe wechseln 
+windows taste + "." = EMOJIS */
 
 body {
   background: linear-gradient(90deg, #f3f5f6, #eeecec);
@@ -54,6 +55,10 @@ a {
 a:hover {
   color: rebeccapurple;
   text-decoration: none;
+}
+.emojis {
+  color: black;
+  background-color: #336699
 }
 
 .logo {

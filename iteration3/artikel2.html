@@ -70,16 +70,15 @@
     <p>
       Auf Twitter wurde dann ein Ankündigungs Trailer zum neuen Dragon Ball
       Spiel hochgeladen. Der Trailer weckt ein Gefühl von Nostalgie, indem
-      Kampfauschnitte aus der alten Budokai Tenkaichi Reihe <br />
-      auf einem Röhrenfernseher abgebildet wird. Hierbei sorgen vor allem die
-      alten Soundeffekte und die Voiceovers für Gänsehaut. Das Highlight des
+      Kampfauschnitte aus der alten Budokai Tenkaichi Reihe
+      auf einem Röhrenfernseher abgebildet wird.<br> Hierbei sorgen vor allem die
+      alten Soundeffekte und die Voiceover für Gänsehaut. Das Highlight des
       Trailers ist jedoch das Ende. <br />
       Zu sehen ist der schreiende Son Goku. Son Goku brüllt hier aber nicht
       aus Spaß, der Grund, die Verwandlung in den Super Saiyajin God Blue.
-      Fans könenn sich also nun auf einen Powerup, <br />
-      für die kommenden Prügeleien freuen. Da mehr als ein Jahrzent
-      verstrichen ist, seitdem der letzte Teil der Reihe veröffentlicht wurde,
-      können sich fans mit einen vermuntlich riesen Sprung in <br />
+      Fans können sich also nun auf einen Powerup, für die kommenden Prügeleien freuen. 
+      Da mehr als ein Jahrzent verstrichen ist, seitdem der letzte Teil der Reihe 
+      veröffentlicht wurde, können sich fans mit einen vermuntlich riesen Sprung in
       Sachen Grafik und Effekte freuen. Zudem ist mit Charakter Erweiterungen
       wie Goku Black bzw. Zamasu, Jiren, Master Beerus, Whis uvm. zu rechnen.
     </p>
@@ -107,8 +106,8 @@
     <strong> Themenbereich:</strong> Dragon Ball Budokai Tenkaichi, Gaming,
     Anime, Bandai Namco <br />
     <br />
-    <button id="Favoritenbutton" onclick="zuFavoritenHinzufuegen()">     <!-- ID gesetzt auf Favoritenbutton davor ohne id-->
-      <span>&#x2764;</span> Zu Favoriten hinzufügen </button>   <!-- Favoritenbutton!!!-->
+    <button class="button" id="favoritenbutton" onclick="zuFavoritenHinzufuegen()">
+      <span class="emojis">&#x2764;</span> Zu Favoriten hinzufügen </button> <!-- favoritenbutton!!!-->
     <br />
     <br />
     Anzahl Personen, die den Blog-Artikel zu ihrer Favoritenliste hinzugefügt
@@ -155,5 +154,39 @@
 
   <script src="./js/counter.js"></script>
   <script src="./js/favoriten.js"></script>
+
+  <!-- --------------------------------------------------Testen!!!!!!!-------------------------------------------------------------------------------------->
+  <script>
+    // Die ID "favoritenbutton" wird als eine Variable gespeichert
+    let favoritenbutton = document.getElementById('favoritenbutton');
+    // mit dem addEventListener wird mit dem "click" Ereignis, also beim anklicken, artikel2 aufgerufen
+    favoritenbutton.addEventListener("click", artikel2);
+
+    function artikel2() { 
+      // Definition des Obj artikel2 mit Eigenschaften
+      const artikel2 = {
+        titel: 'Das neue Dragon Ball Z Budokai Tenkaichi 4: Nach 16 Jahren folgen endlich wieder Prügeleien',
+        autor: 'Racix',
+        bild_url: 'Super Saiyajin Blue - Budokai Tenkaichi.png',
+        datum: '06.03.2023',
+        url: 'artikel2.html',
+        // id: "Gesamt-Artikel"
+        // ggf. weitere Attribute ...
+      };
+      zuFavoritenHinzufuegen(artikel2); 
+      // die Seite wird beim hinzufügen des Artikels neugeladen
+      window.location.reload();
+    }
+    // document.getElementById('favoritenbutton').addEventListener('click', function () {
+    //   if (istFavorit(artikel2)) {
+    //     entfernenVonFavoriten(artikel2);
+    //     favoritenbutton.textContent ='zu Favoriten hinzufügen';
+    //   } else {
+    //     zuFavoritenHinzufuegen(artikel2);
+    //     favoritenbutton.textContent = 'Artikel ist ein Favorit';
+    // }
+    // });
+  </script>
 </body>
+
 </html>

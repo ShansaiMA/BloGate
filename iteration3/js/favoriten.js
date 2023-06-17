@@ -1,4 +1,4 @@
-function zuFavoritenHinzufuegen(aritkel) {
+function zuFavoritenHinzufuegen(artikel) {
   //versuchen, das Favoriten-Array aus dem LocalStorage lesen
   const favoriten = JSON.parse(localStorage.getItem("favoriten"));
 
@@ -16,3 +16,5 @@ function zuFavoritenHinzufuegen(aritkel) {
     localStorage.setItem("favoriten", JSON.stringify([artikel]));
   }
 }
+
+
