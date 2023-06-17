@@ -155,56 +155,56 @@
     }
 
 
-//     const favoritenButton = document.getElementById('Favoritenbutton');
-// favoritenButton.addEventListener('click', () => {
-//   // Überprüfen, ob bereits Favoriten im localStorage gespeichert sind
-//   const favoriten = JSON.parse(localStorage.getItem('favoriten')) || [];
+    //     const favoritenButton = document.getElementById('Favoritenbutton');
+    // favoritenButton.addEventListener('click', () => {
+    //   // Überprüfen, ob bereits Favoriten im localStorage gespeichert sind
+    //   const favoriten = JSON.parse(localStorage.getItem('favoriten')) || [];
 
-//   // Überprüfen, ob der aktuelle Artikel bereits in den Favoriten vorhanden ist
-//   const artikelExists = favoriten.some((favorit) => favorit.url === artikel1.url);
+    //   // Überprüfen, ob der aktuelle Artikel bereits in den Favoriten vorhanden ist
+    //   const artikelExists = favoriten.some((favorit) => favorit.url === artikel1.url);
 
-//   if (!artikelExists) {
-//     // Hinzufügen des aktuellen Artikels zu den Favoriten
-//     favoriten.push(artikel1);
+    //   if (!artikelExists) {
+    //     // Hinzufügen des aktuellen Artikels zu den Favoriten
+    //     favoriten.push(artikel1);
 
-//     // Aktualisierte Favoriten im localStorage speichern
-//     localStorage.setItem('favoriten', JSON.stringify(favoriten));
+    //     // Aktualisierte Favoriten im localStorage speichern
+    //     localStorage.setItem('favoriten', JSON.stringify(favoriten));
 
-//     // Ändern des Button-Textes auf "Ist Favorit"
-//     favoritenButton.textContent = 'Artikel ist Favorit';
-//   } else {
-//     console.log('Der Artikel ist bereits in den Favoriten vorhanden.');
-//   }
-// });
+    //     // Ändern des Button-Textes auf "Ist Favorit"
+    //     favoritenButton.textContent = 'Artikel ist Favorit';
+    //   } else {
+    //     console.log('Der Artikel ist bereits in den Favoriten vorhanden.');
+    //   }
+    // });
 
-const favoritenButton = document.getElementById('Favoritenbutton');
-favoritenButton.addEventListener('click', () => {
-  // Überprüfen, ob bereits Favoriten im localStorage gespeichert sind
-  const favoriten = JSON.parse(localStorage.getItem('favoriten')) || [];
+    const favoritenButton = document.getElementById('Favoritenbutton');
+    favoritenButton.addEventListener('click', () => {
+      // Überprüfen, ob bereits Favoriten im localStorage gespeichert sind
+      const favoriten = JSON.parse(localStorage.getItem('favoriten')) || [];
 
-  // Überprüfen, ob der aktuelle Artikel bereits in den Favoriten vorhanden ist
-  const artikelExists = favoriten.some((favorit) => favorit.url === artikel1.url);
+      // Überprüfen, ob der aktuelle Artikel bereits in den Favoriten vorhanden ist
+      const artikelExists = favoriten.some((favorit) => favorit.url === artikel1.url);
 
-  if (!artikelExists) {
-    // Hinzufügen des aktuellen Artikels zu den Favoriten
-    favoriten.push(artikel1);
+      if (!artikelExists) {
+        // Hinzufügen des aktuellen Artikels zu den Favoriten
+        favoriten.push(artikel1);
 
-    // Aktualisierte Favoriten im localStorage speichern
-    localStorage.setItem('favoriten', JSON.stringify(favoriten));
+        // Aktualisierte Favoriten im localStorage speichern
+        localStorage.setItem('favoriten', JSON.stringify(favoriten));
 
-    // Ändern des Button-Textes auf "Ist Favorit"
-    favoritenButton.textContent = 'Artikel ist Favorit';
-  } else {
-    // Entfernen des aktuellen Artikels aus den Favoriten
-    const updatedFavoriten = favoriten.filter((favorit) => favorit.url !== artikel1.url);
+        // Ändern des Button-Textes auf "Ist Favorit"
+        favoritenButton.textContent = 'Artikel ist Favorit';
+      } else {
+        // Entfernen des aktuellen Artikels aus den Favoriten
+        const updatedFavoriten = favoriten.filter((favorit) => favorit.url !== artikel1.url);
 
-    // Aktualisierte Favoriten im localStorage speichern
-    localStorage.setItem('favoriten', JSON.stringify(updatedFavoriten));
+        // Aktualisierte Favoriten im localStorage speichern
+        localStorage.setItem('favoriten', JSON.stringify(updatedFavoriten));
 
-    // Ändern des Button-Textes auf "Favorit entfernen"
-    favoritenButton.textContent = 'Zu Favoriten hinzufügen'; //Das Herzsymbol ist leider nicht mehr da
-  }
-});
+        // Ändern des Button-Textes auf "Favorit entfernen"
+        favoritenButton.textContent = 'Zu Favoriten hinzufügen'; //Das Herzsymbol ist leider nicht mehr da
+      }
+    });
 
 
 
