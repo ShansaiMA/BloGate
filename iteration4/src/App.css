@@ -1,42 +1,213 @@
-#root {
-  max-width: 1280px;
+@font-face {
+  font-family: "Open-Sans";
+  src: url("../Fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Open-Sans";
+  background-color: #f3f5f6;
+}
+
+/* Notes: An manchen Stellen ist die Farbe anders (z.B Figurelement) -  Anpassen dass bei Seite kleiner machen alles drauf ist, mäßig minimieren - Blaue Verweis Farbe wechseln 
+windows taste + "." = EMOJIS */
+
+body {
+  background: linear-gradient(90deg, #f3f5f6, #eeecec);
+  /* Noch Farbe ändern (Weiss mit Grau), in der Mtite ist die Farbe noch anders neben der Produkttabelle usw. */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+}
+
+main {
+  width: 100vw;
+  margin: 0 auto;
+  /* padding: 30px 20px; */
+}
+
+header,
+main,
+footer {
+  margin: 30px auto;
+  /* margin-top: max(30px, auto); machen für das obere*/
+  width: 80%;
+}
+
+/* Navigation-Bar / Changen bis CSA Hover */
+
+.header {
+  display: block;
+  /* display: flex;
+   justify-content: space-between;
+   align-items: center; (Kontaktbutton Bug, nicht nach Rechts verschoben */
+  padding: 10px;
+  background-color: #f3f5f6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  text-decoration: none;
+  color: #336699;
+}
+
+a:hover {
+  color: rebeccapurple;
+  text-decoration: none;
+}
+.emojis {
+  color: rgb(255, 255, 255);
+  background-color: #336699
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #f3f5f6, #eeecec);
+  /* Selbe Farbe wie Body gemacht */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo img {
+  /* display: block; (Entfernt um Logo Bug zu fixen)  */
+  max-width: 100%;
+  height: auto;
+  /* padding-left: 620px; (Entfernt um Logo Bug zu fixen) */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.logo :hover {
+  margin-left: 15px;
+  transition-property: all;
+  transition-duration: 2s;
 }
 
-.card {
-  padding: 2em;
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.read-the-docs {
-  color: #888;
+.nav_links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_links li {
+  margin-right: 20px;
+}
+
+/* -------------- Navigationslinks in der Nav bar* ------------ */
+.nav_links a {
+  text-decoration: none;
+  color: #336699;
+  font-weight: bold;
+  transition: box-shadow 1s;
+  /* Animation Schatten */
+  padding: 3px 8px;
+  /* Für den ,,Rahmen" beim hover */
+}
+
+/* ----------- Navigations Links im Header Hover -------- */
+.nav_links a:hover {
+  color: rebeccapurple;
+  box-shadow: 5px 5px 10px #777;
+}
+
+/* ----------- Kontakt Button ---------- */
+.csa {
+  margin-left: auto;
+  text-decoration: none;
+  color: #fff;
+  background-color: #336699;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: box-shadow 1s;
+  /* Animation Schatten */
+}
+
+/* -------------- Kontakt Button Hover ----------- */
+.csa:hover {
+  background-color: rebeccapurple;
+  color: #ffffff;
+  box-shadow: 5px 5px 10px #777;
+  /*  Animation Schatten */
+}
+
+.button {
+  text-decoration: none;
+  color: #fff;
+  background-color: #336699;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #437cb6;
+  color: #ffffff;
+}
+
+/* -------- Sodass die Bilder durch Figureelement automatisch Zentriert werden ----------- */
+.figurebild {
+  margin-left: auto;
+}
+
+/* Design für Tabellen */
+.artikel_tabelle {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.artikel_tabelle th,
+.artikel_tabelle td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.ÜberschriftenLeiste-tr {
+  background-color: #7297bb;
+}
+
+#content {
+  width: 80%;
+  margin: 30px auto;
+  background: linear-gradient(90deg, #f3f5f6, #eeecec);
+  /* Selbe Farbe wie Body gemacht */
+  /*margin: auto; */
+}
+
+/* Das Untere gehört zum Kommentarbereich*/
+.KommentarFormular {
+  padding: 10px;
+  width: 300px;
+}
+
+/*Autorenbox*/
+
+.autorenbox {
+  width: 300px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 10px 10px 15px silver;
+}
+
+.footer {
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f3f5f6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.fußbereich {
+  margin-left: auto;
+  margin-right: auto;
 }
