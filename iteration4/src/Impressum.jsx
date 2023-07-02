@@ -9,7 +9,7 @@ import './App.css';
     </article>
 
 
-    <div class="autorenbox">
+    <div className="autorenbox">
       <ul>
         <li>Name: Armend Ukzmaili</li>
         <li>Studiengang: E-Commerce</li>
@@ -18,7 +18,7 @@ import './App.css';
     </div>
 
 
-    <div class="autorenbox">
+    <div className="autorenbox">
       <ul>
         <li>Name: Shansai Mahendran</li>
         <li>Studiengang: E-Commerce</li>
