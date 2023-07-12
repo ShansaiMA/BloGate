@@ -8,7 +8,7 @@ function Header() {
       {/* HTML-Inhalt für den Header */}
 
       <div className="logo">
-        <a href="startseite.html">
+        <a href="/">
         <img src={LogoBild} alt="Logo der Webseite" width="300"/>
 
           
