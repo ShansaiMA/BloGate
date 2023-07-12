@@ -3,11 +3,27 @@ import './App.css';
 
 function Favoriten() {
   return (
-    <div>
-      {/* HTML-Inhalt für die Favoriten-Seite */}
-      <h2>Favoriten</h2>
-      <p>Hier sind die Favoriten...</p>
-    </div>
+
+    <div id="content">
+    <h2> Favoriten </h2>
+    
+    <table class="artikel_tabelle">
+      <thead>
+        <tr>
+          <th class="ÜberschriftenLeiste-tr">Artikelüberschrift</th>
+          <th class="ÜberschriftenLeiste-tr">Autor</th>
+          <th class="ÜberschriftenLeiste-tr">Bildvorschau</th>
+          <th class="ÜberschriftenLeiste-tr">Veröffentlichungsdatum</th>
+          <th class="ÜberschriftenLeiste-tr">Löschen</th>
+        </tr>
+      </thead>
+      <tbody id="tbodyinhalt">
+
+      </tbody>
+    </table>
+
+
+  </div>
   );
 }
 

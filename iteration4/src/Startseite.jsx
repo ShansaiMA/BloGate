@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 
 
+
 function Startseite() {
   return (
     <div>
@@ -11,12 +12,14 @@ function Startseite() {
         <br />
         <br />
         <table className="artikel_tabelle">
+          <thead>
           <tr>
             <th className="ÜberschriftenLeiste-tr">Artikelüberschrift</th>
             <th className="ÜberschriftenLeiste-tr">Autor</th>
             <th className="ÜberschriftenLeiste-tr">Bildvorschau</th>
             <th className="ÜberschriftenLeiste-tr">Veröffentlichungsdatum</th>
           </tr>
+          </thead>
           <tr>
             <td>
               <a href="artikel1.html">Die Gerüchte Küche brodelt: GTA 6 noch vor dem <time>17. Mai 2023? </time> </a>
@@ -24,7 +27,7 @@ function Startseite() {
             <td>Armo</td>
             <td>
               <img
-                src="../img/Artikel Fotos/Artikel 1.jpeg"
+                src="./img/Artikel Fotos/Artikel 1.jpeg"
                 alt="Profilbild von Armo"
                 width="100"
               />
@@ -42,7 +45,7 @@ function Startseite() {
             <td>Racix</td>
             <td>
               <img
-                src="../img/Artikel Fotos/Super Saiyajin Blue - Budokai Tenkaichi.png"
+                src="./img/Artikel Fotos/Super Saiyajin Blue - Budokai Tenkaichi.png"
                 alt="Hauptbild Dragon Ball"
                 width="100"
               />
