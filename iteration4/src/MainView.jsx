@@ -5,6 +5,7 @@ import Artikel from './Artikel';
 import Favoriten from './Favoriten';
 import Impressum from './Impressum';
 import Kontakt from './Kontakt';
+import './App.css';
 
 function MainView() {
   return (
