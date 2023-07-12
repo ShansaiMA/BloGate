@@ -2,7 +2,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+/* *{
+  box-sizing: border-box;
+  font-family: "Open-Sans";
+  background-color: #f3f5f6;
+}*/
+
+/* Notes: An manchen Stellen ist die Farbe anders (z.B Figurelement) -  Anpassen dass bei Seite kleiner machen alles drauf ist, mäßig minimieren - Blaue Verweis Farbe wechseln 
+windows taste + "." = EMOJIS */
+
 body {
+  /* Noch Farbe ändern (Weiss mit Grau), in der Mtite ist die Farbe noch anders neben der Produkttabelle usw. */
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
@@ -16,14 +26,17 @@ body {
 main {
   width: 100vw;
   margin: 0 auto;
+  /* padding: 30px 20px; */
 }
 
 header,
 main,
 footer {
   margin: 30px auto;
+  /* margin-top: max(30px, auto); machen für das obere*/
 }
 
+/* Navigation-Bar / Changen bis CSA Hover */
 .header {
   display: flex; 
   flex-direction: row;
@@ -31,6 +44,9 @@ footer {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
+  /* display: flex;
+   justify-content: space-between;
+   align-items: center; (Kontaktbutton Bug, nicht nach Rechts verschoben */
   
 }
 
@@ -50,12 +66,15 @@ a:hover {
   justify-content: center;
   background-color: #f3f5f6;
   padding: 10px;
+  /* Selbe Farbe wie Body gemacht */
   
 }
 
 .logo img {
+  /* display: block; (Entfernt um Logo Bug zu fixen)  */
   max-width: 100%;
   height: auto;
+  /* padding-left: 620px; (Entfernt um Logo Bug zu fixen) */
   
 }
 
@@ -71,25 +90,31 @@ a:hover {
   display: flex;
   margin: 0;
   padding: 0;
+  
 }
 
 .nav_links li {
   margin-right: 20px;
 }
 
+/* -------------- Navigationslinks in der Nav bar* ------------ */
 .nav_links a {
   text-decoration: none;
-  color: #336699;
+  color: black;
   font-weight: bold;
   transition: box-shadow 1s;
+  /* Animation Schatten */
   padding: 3px 8px;
+  /* Für den ,,Rahmen" beim hover */
 }
 
+/* ----------- Navigations Links im Header Hover -------- */
 .nav_links a:hover {
   color: rebeccapurple;
   box-shadow: 5px 5px 10px #777;
 }
 
+/* ----------- Kontakt Button ---------- */
 .csa {
   margin-left: auto;
   text-decoration: none;
@@ -128,10 +153,12 @@ a:hover {
   font-weight: bold;
 }
 
+/* -------- Sodass die Bilder durch Figureelement automatisch Zentriert werden ----------- */
 .figurebild {
   margin-left: auto;
 }
 
+/* Design für Tabellen */
 .artikel_tabelle {
   border-collapse: collapse;
   border: 1px solid black;
@@ -152,12 +179,17 @@ a:hover {
   margin: 30px auto;
   background: linear-gradient(90deg, #f3f5f6, #eeecec);
   color: black;
+    /* Selbe Farbe wie Body gemacht */
+  /*margin: auto; */
 }
 
+/* Das Untere gehört zum Kommentarbereich*/
 .KommentarFormular {
   padding: 10px;
   width: 300px;
 }
+
+/*Autorenbox*/
 
 .autorenbox {
   width: 300px;
@@ -180,6 +212,8 @@ a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   color: black;
+  position: sticky;
+  bottom: 0;
 }
 
 .fußbereich {
