@@ -3,9 +3,10 @@ import './App.css';
 
 function Footer() {
   return (
-    <footer>
-      {/* HTML-Inhalt für den Footer */}
-      <p>© 2023 Meine Website. Alle Rechte vorbehalten.</p>
+    <footer className='footer'>
+      <div className='fußbereich'>
+      © Shansai Mahendran, Armend Ukzmaili - 2023 
+      </div>
     </footer>
   );
 }
