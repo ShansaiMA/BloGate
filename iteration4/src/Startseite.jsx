@@ -5,21 +5,20 @@ import './App.css';
 
 function Startseite() {
   return (
-    <div>
-      {/* HTML-Inhalt für die Startseite */}
-      
-      <div id= "content">
+    <div className='content'>
+
+      <div>
         <h2 className='Überschrifth2'>Willkommen auf der Startseite!</h2>
         <br />
         <br />
         <table className="artikel_tabelle">
           <thead>
-          <tr>
-            <th className="ÜberschriftenLeiste-tr">Artikelüberschrift</th>
-            <th className="ÜberschriftenLeiste-tr">Autor</th>
-            <th className="ÜberschriftenLeiste-tr">Bildvorschau</th>
-            <th className="ÜberschriftenLeiste-tr">Veröffentlichungsdatum</th>
-          </tr>
+            <tr>
+              <th className="ÜberschriftenLeiste-tr">Artikelüberschrift</th>
+              <th className="ÜberschriftenLeiste-tr">Autor</th>
+              <th className="ÜberschriftenLeiste-tr">Bildvorschau</th>
+              <th className="ÜberschriftenLeiste-tr">Veröffentlichungsdatum</th>
+            </tr>
           </thead>
           <tr>
             <td>

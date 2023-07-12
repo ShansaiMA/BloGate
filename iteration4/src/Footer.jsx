@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className='footer'>
       <div className='fußbereich'>
-      © Shansai Mahendran, Armend Ukzmaili - 2023 
+        © Shansai Mahendran, Armend Ukzmaili - 2023
       </div>
     </footer>
   );

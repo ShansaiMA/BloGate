@@ -1,12 +1,12 @@
 /* styles.css */
 
-.root{
+.root {
   font-family: 'Open Sans', sans-serif;
 }
 
-*{
+* {
   font-family: 'Open Sans', sans-serif;
-  
+
 }
 
 /* Notes: An manchen Stellen ist die Farbe anders (z.B Figurelement) -  Anpassen dass bei Seite kleiner machen alles drauf ist, mäßig minimieren - Blaue Verweis Farbe wechseln 
@@ -39,21 +39,17 @@ footer {
 
 /* Navigation-Bar / Changen bis CSA Hover */
 .header {
-  display: flex; 
+  display: flex;
   flex-direction: row;
   background-color: #f3f5f6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  /* display: flex;
-   justify-content: space-between;
-   align-items: center; (Kontaktbutton Bug, nicht nach Rechts verschoben */
-  
+
 }
 
 a {
   text-decoration: none;
   color: #336699;
+
 }
 
 a:hover {
@@ -67,8 +63,9 @@ a:hover {
   justify-content: center;
   background-color: #f3f5f6;
   padding: 10px;
+
   /* Selbe Farbe wie Body gemacht */
-  
+
 }
 
 .logo img {
@@ -76,26 +73,37 @@ a:hover {
   max-width: 100%;
   height: auto;
   /* padding-left: 620px; (Entfernt um Logo Bug zu fixen) */
-  
+
+}
+
+.logo :hover {
+  transform: translateX(10px);
+  transition: transform 2.0s ease;
+}
+
+
+.NavAll {
+  display: flex;
+
+  padding: 5px;
+  justify-content: flex-end;
 }
 
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 20px;
 }
 
 .nav_links {
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
-  
+
+
 }
 
 .nav_links li {
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 /* -------------- Navigationslinks in der Nav bar* ------------ */
@@ -105,9 +113,12 @@ a:hover {
   font-weight: bold;
   transition: box-shadow 1s;
   /* Animation Schatten */
-  padding: 3px 8px;
+  padding: 6px 8px;
   /* Für den ,,Rahmen" beim hover */
+
+
 }
+
 
 /* ----------- Navigations Links im Header Hover -------- */
 .nav_links a:hover {
@@ -115,11 +126,18 @@ a:hover {
   box-shadow: 5px 5px 10px #777;
 }
 
+.nav_links2 {
+
+  list-style: none;
+  margin-left: auto;
+}
+
+
 /* ----------- Kontakt Button ---------- */
 .csa {
-  margin-left: auto;
+  justify-content: flex-end;
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
   background-color: #336699;
   padding: 10px 20px;
   border-radius: 5px;
@@ -129,13 +147,14 @@ a:hover {
 
 /* -------------- Kontakt Button Hover ----------- */
 .csa:hover {
-  background-color: rebeccapurple;
+  background-color: rgba(102, 51, 153, 0.911);
   color: #ffffff;
   box-shadow: 5px 5px 10px #777;
   /*  Animation Schatten */
 }
 
 .button {
+
   text-decoration: none;
   color: #fff;
   background-color: #336699;
@@ -148,8 +167,9 @@ a:hover {
   color: #ffffff;
 }
 
-.Überschrifth2 {
-  
+.Überschrifth1 {
+  /*noch nicht Überall Überschriften verändert... className="#" */
+
   color: black;
   font-weight: bold;
 }
@@ -173,24 +193,45 @@ a:hover {
 
 .ÜberschriftenLeiste-tr {
   background-color: #7297bb;
+  color: white;
 }
 
-#content {
+
+
+/*         Content (alle Seiten aufgeteilt)        */
+
+.content {
   width: 80%;
   margin: 30px auto;
   background: linear-gradient(90deg, #f3f5f6, #eeecec);
   color: black;
-    /* Selbe Farbe wie Body gemacht */
+  /* Selbe Farbe wie Body gemacht */
   /*margin: auto; */
 }
 
-/* Das Untere gehört zum Kommentarbereich*/
+.content-impressum {
+  width: 80%;
+  margin: 90px auto;
+}
+
+
+
+
+/*         Kommentarbereich         */
+
 .KommentarFormular {
   padding: 10px;
   width: 300px;
 }
 
-/*Autorenbox*/
+.Kontaktformular {
+  margin: auto;
+}
+
+
+
+
+/*        Autorenbox       */
 
 .autorenbox {
   width: 300px;
@@ -200,10 +241,15 @@ a:hover {
   margin: 10px;
   box-shadow: 10px 10px 15px silver;
   color: black;
+
 }
+
+
+/*            Fußzeile CSS              */
 
 .footer {
   margin-top: auto;
+
   padding: 15px;
   background-color: #f3f5f6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
