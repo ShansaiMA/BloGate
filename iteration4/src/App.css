@@ -1,12 +1,13 @@
 /* styles.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.root{
+  font-family: 'Open Sans', sans-serif;
+}
 
-/* *{
-  box-sizing: border-box;
-  font-family: "Open-Sans";
-  background-color: #f3f5f6;
-}*/
+*{
+  font-family: 'Open Sans', sans-serif;
+  
+}
 
 /* Notes: An manchen Stellen ist die Farbe anders (z.B Figurelement) -  Anpassen dass bei Seite kleiner machen alles drauf ist, mäßig minimieren - Blaue Verweis Farbe wechseln 
 windows taste + "." = EMOJIS */
@@ -15,7 +16,7 @@ body {
   /* Noch Farbe ändern (Weiss mit Grau), in der Mtite ist die Farbe noch anders neben der Produkttabelle usw. */
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background: linear-gradient(90deg, #f3f5f6, #eeecec);
   display: flex;
   flex-direction: column;
@@ -202,18 +203,12 @@ a:hover {
 }
 
 .footer {
-  
   margin-top: auto;
-  margin-bottom: 0;
-  justify-content: space-between;
-  align-items: center;
   padding: 15px;
   background-color: #f3f5f6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   color: black;
-  position: sticky;
-  bottom: 0;
 }
 
 .fußbereich {

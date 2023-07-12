@@ -4,7 +4,7 @@ import './App.css';
 
 function Kontakt() {
   return (
-    <div>
+    <div content='KontaktFormular'>
       {/* HTML-Inhalt für die Kontakt-Seite */}
       <h2>Kontakt</h2>
       <form>
