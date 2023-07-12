@@ -4,12 +4,10 @@ import './App.css';
 function Impressum() {
   return (
     <div>
-      {/* HTML-Inhalt für die Impressum-Seite */}
-      <h2>Impressum</h2>
+      
       <div id="content">
-    <article>
-      <h1>Impressum</h1>
-    </article>
+        <h2 className='Überschrifth2'>Impressum</h2>
+   
 
 
     <div className="autorenbox">

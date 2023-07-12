@@ -25,10 +25,13 @@ footer {
 }
 
 .header {
-  display: flex;
-  padding: 10px;
+  display: flex; 
+  flex-direction: row;
   background-color: #f3f5f6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  
 }
 
 a {
@@ -45,18 +48,22 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(90deg, #f3f5f6, #eeecec);
+  background-color: #f3f5f6;
+  padding: 10px;
+  
 }
 
 .logo img {
   max-width: 100%;
   height: auto;
+  
 }
 
 .navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 20px;
 }
 
 .nav_links {
@@ -96,6 +103,12 @@ a:hover {
   color: #ffffff;
 }
 
+.Überschrifth2 {
+  
+  color: black;
+  font-weight: bold;
+}
+
 .figurebild {
   margin-left: auto;
 }
@@ -119,6 +132,7 @@ a:hover {
   width: 80%;
   margin: 30px auto;
   background: linear-gradient(90deg, #f3f5f6, #eeecec);
+  color: black;
 }
 
 .KommentarFormular {
@@ -133,10 +147,11 @@ a:hover {
   border-radius: 10px;
   margin: 10px;
   box-shadow: 10px 10px 15px silver;
+  color: black;
 }
 
 .footer {
-  width: 100%;
+  
   margin-top: auto;
   margin-bottom: 0;
   justify-content: space-between;
@@ -145,6 +160,7 @@ a:hover {
   background-color: #f3f5f6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  color: black;
 }
 
 .fußbereich {

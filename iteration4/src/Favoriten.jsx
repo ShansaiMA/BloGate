@@ -5,7 +5,7 @@ function Favoriten() {
   return (
 
     <div id="content">
-    <h2> Favoriten </h2>
+    <h2 className='Überschrifth2'> Favoriten </h2>
     
     <table class="artikel_tabelle">
       <thead>

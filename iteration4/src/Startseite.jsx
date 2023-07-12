@@ -7,8 +7,9 @@ function Startseite() {
   return (
     <div>
       {/* HTML-Inhalt für die Startseite */}
-      <h2>Willkommen auf der Startseite!</h2>
+      
       <div id= "content">
+        <h2 className='Überschrifth2'>Willkommen auf der Startseite!</h2>
         <br />
         <br />
         <table className="artikel_tabelle">

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Link } from 'react-router-dom';
+import LogoBild from '/img/Transparentes Logo.png';
 
 function Header() {
   return (
@@ -9,7 +9,9 @@ function Header() {
 
       <div className="logo">
         <a href="startseite.html">
-          <img src="./img/Transparentes Logo.png" alt="Logo der Webseite" width="300" />
+        <img src={LogoBild} alt="Logo der Webseite" width="300"/>
+
+          
         </a>
       </div>
 
