@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.css';
+
 
 function Kontakt() {
-    return (
-      <>
-        <h2>Kontaktformular</h2>
-        <form>
+  return (
+    <div>
+      {/* HTML-Inhalt für die Kontakt-Seite */}
+      <h2>Kontakt</h2>
+      <form>
           <fieldset>
             <table>
               <tr>
@@ -55,8 +56,8 @@ function Kontakt() {
             </div>
           </fieldset>
         </form>
-      </>
-    );
-  }
+    </div>
+  );
+}
 
 export default Kontakt;

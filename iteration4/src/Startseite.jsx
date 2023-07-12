@@ -1,8 +1,11 @@
 import React from 'react';
-import './App.css';
+
 
 function Startseite() {
-    return (
+  return (
+    <div>
+      {/* HTML-Inhalt für die Startseite */}
+      <h2>Willkommen auf der Startseite!</h2>
       <div id= "content">
         <br />
         <br />
@@ -49,7 +52,8 @@ function Startseite() {
           </tr>
         </table>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
 export default Startseite;

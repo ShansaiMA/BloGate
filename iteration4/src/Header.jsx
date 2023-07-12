@@ -4,16 +4,20 @@ import './App.css';
 function Header() {
   return (
     <header className="header">
+      {/* HTML-Inhalt für den Header */}
+      <h1>Meine Website</h1>
       <nav className="navigation">
         <ul className="nav_links">
-          <li><a href="startseite.html">Startseite</a></li>
-          <li><a href="favoriten.html">Favoriten</a></li>
-          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="/">Startseite</a></li>
+          <li><a href="/artikel">Artikel</a></li>
+          <li><a href="/favoriten">Favoriten</a></li>
+          <li><a href="/impressum">Impressum</a></li>
+          <li><a className="csa" href="/kontakt">Kontakt</a></li>
         </ul>
-        <a className="csa" href="kontakt.html">Kontakt</a>
       </nav>
-    </header> 
+    </header>
   );
 }
 
 export default Header;
+

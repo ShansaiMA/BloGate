@@ -1,21 +1,24 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import HauptMain from './HauptMain'; // muss vielleiht drinne sein
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Startseite from './Startseite';
+import Artikel from './Artikel';
 import Favoriten from './Favoriten';
 import Impressum from './Impressum';
 import Kontakt from './Kontakt';
-import Artikel from './Artikel';
 
 function MainView() {
   return (
-    <div>
-      <Header />
-      <HauptMain />
-      <Footer />
-    </div>
-    
+    <main>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Startseite />} />
+          <Route path="/artikel/:id" element={<Artikel />} />
+          <Route path="/favoriten" element={<Favoriten />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/kontakt" element={<Kontakt />} />
+        </Routes>
+      </BrowserRouter>
+    </main>
   );
 }
 

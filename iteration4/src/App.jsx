@@ -1,15 +1,16 @@
-import './App.css';
 import React from 'react';
+import Header from './Header';
 import MainView from './MainView';
+import Footer from './Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <MainView/>
-    </>
-  )
+    <div>
+      <Header />
+      <MainView />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;

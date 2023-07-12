@@ -1,9 +1,11 @@
 import React from 'react';
-import './App.css';
 
-
-
-<div id="content">
+function Impressum() {
+  return (
+    <div>
+      {/* HTML-Inhalt für die Impressum-Seite */}
+      <h2>Impressum</h2>
+      <div id="content">
     <article>
       <h1>Impressum</h1>
     </article>
@@ -26,5 +28,8 @@ import './App.css';
       </ul>
     </div>
   </div>
+    </div>
+  );
+}
 
-export default impressum;
+export default Impressum;

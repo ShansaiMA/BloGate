@@ -1,16 +1,12 @@
 import React from 'react';
-import './App.css';
 
-
-const Footer = () => {
+function Footer() {
   return (
-    <footer className="footer">
-      <div className="fußbereich">
-        © Shansai Mahendran, Armend Ukzmaili - 2023
-      </div>
+    <footer>
+      {/* HTML-Inhalt für den Footer */}
+      <p>© 2023 Meine Website. Alle Rechte vorbehalten.</p>
     </footer>
   );
-};
-
+}
 
 export default Footer;
