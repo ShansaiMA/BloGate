@@ -26,11 +26,13 @@ function Startseite() {
             </td>
             <td>Armo</td>
             <td>
+            <Link to="Artikel/1" target="_blank">
               <img
                 src="./img/Artikel Fotos/Artikel 1.jpeg"
                 alt="Profilbild von Armo"
                 width="100"
               />
+              </Link>
             </td>
             <td>
               <time>24.04.2023</time>
@@ -44,11 +46,13 @@ function Startseite() {
             </td>
             <td>Racix</td>
             <td>
+            <Link to="Artikel/2" target="_blank">
               <img
                 src="./img/Artikel Fotos/Super Saiyajin Blue - Budokai Tenkaichi.png"
                 alt="Hauptbild Dragon Ball"
                 width="100"
               />
+              </Link>
             </td>
             <td>
               <time>06.03.2023</time>

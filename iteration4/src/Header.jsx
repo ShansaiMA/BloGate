@@ -16,7 +16,6 @@ function Header() {
         <ul className="nav_links">
 
           <li><a href="/">Startseite</a></li>
-          <li><a href="/artikel">Artikel</a></li>
           <li><a href="/favoriten">Favoriten</a></li>
           <li><a href="/impressum">Impressum</a></li>
         </ul>
