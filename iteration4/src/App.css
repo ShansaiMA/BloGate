@@ -214,6 +214,21 @@ a:hover {
   margin: 90px auto;
 }
 
+/*        Sterne-Bewertung         */
+
+.rating {
+  font-size: 24px;
+}
+
+.leerer-Stern {
+  color: #ccc;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.aktiver-Stern {
+  color: #c33ced;
+}
 
 
 
@@ -260,18 +275,4 @@ a:hover {
 .fußbereich {
   margin-left: auto;
   margin-right: auto;
-}
-
-.rating {
-  font-size: 24px;
-}
-
-.leerer-Stern {
-  color: #ccc;
-  transition: color 0.2s;
-  cursor: pointer;
-}
-
-.aktiver-Stern {
-  color: #c33ced;
 }
