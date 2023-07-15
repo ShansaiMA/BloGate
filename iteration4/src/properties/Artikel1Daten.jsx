@@ -1,5 +1,6 @@
 
 import Zeichenzähler from '../Zeichenzähler';
+import Rating from '../Rating';
 
 const Artikel1Daten = {
   
@@ -55,22 +56,16 @@ const Artikel1Daten = {
   </button>
   <p>Anzahl Personen, die den Blog-Artikel zu ihrer Favoritenliste hinzugefügt haben: 2</p>
 
-  {/* Kommentarfunktion */}
+ 
   <form>
     <fieldset className="KommentarFormular">
       <legend>
         <h2>Sprich Dich aus</h2>
       </legend>
       <div>
-        <label htmlFor="bewertung">Bewertung:</label>
-        <select id="bewertung" name="bewertung">
-          <option value="Sehr gut">5 Sterne</option>
-          <option value="gut">4 Sterne</option>
-          <option value="mittel">3 Sterne</option>
-          <option value="schlecht">2 Sterne</option>
-          <option value="sehr schlecht">1 Sterne</option>
-        </select>
+        <Rating/>
       </div>
+
       <div>
         <label htmlFor="kommentar">
           <h3>Kommentar:</h3>
