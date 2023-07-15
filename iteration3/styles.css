@@ -13,7 +13,7 @@
 windows taste + "." = EMOJIS */
 
 body {
-  background: linear-gradient(90deg, #f3f5f6, #eeecec);
+  background: linear-gradient(180deg, #f3f5f6, #eeecec);
   /* Noch Farbe ändern (Weiss mit Grau), in der Mtite ist die Farbe noch anders neben der Produkttabelle usw. */
   display: flex;
   flex-direction: column;
@@ -65,7 +65,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(90deg, #f3f5f6, #eeecec);
+  background: #f3f5f6;
   /* Selbe Farbe wie Body gemacht */
 }
 
@@ -173,10 +173,11 @@ a:hover {
 #content {
   width: 80%;
   margin: 30px auto;
-  background: linear-gradient(90deg, #f3f5f6, #eeecec);
+  background: #f3f5f6;
   /* Selbe Farbe wie Body gemacht */
   /*margin: auto; */
 }
+
 
 /* Das Untere gehört zum Kommentarbereich*/
 .KommentarFormular {
