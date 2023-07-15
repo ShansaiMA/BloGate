@@ -1,19 +1,32 @@
-import React from 'react';
-import './App.css';
-import { useParams } from 'react-router-dom';
 
-function Artikel() {
+import './App.css';
+import React from "react";
+import { useParams } from "react-router-dom";
+import Artikel1Daten from "../src/properties/Artikel1Daten";
+import Artikel2Daten from "../src/properties/Artikel2Daten";
+
+const Artikel = () => {
   const { id } = useParams();
 
-
-  // Hier kannst du den Inhalt des Artikels basierend auf der `id` anzeigen
+  let articleData;
+  if (id === "1") {
+    articleData = Artikel1Daten;
+  } else if (id === "2") {
+    articleData = Artikel2Daten;
+  }
 
   return (
     <div>
-      <h1 className='Überschrifth1'>Artikel {id}</h1>
-      {/* Zeige den entsprechenden Inhalt des Artikels an */}
+      <p>{articleData.content}</p>
     </div>
   );
-}
+};
 
 export default Artikel;
+
+
+
+
+
+
+

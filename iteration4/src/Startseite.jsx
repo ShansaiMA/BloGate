@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-
-
+import { Link } from 'react-router-dom';
+import Artikel from './Artikel';
 
 function Startseite() {
   return (
     <div className='content'>
-
       <div>
         <h2 className='Überschrifth2'>Willkommen auf der Startseite!</h2>
         <br />
@@ -20,9 +19,10 @@ function Startseite() {
               <th className="ÜberschriftenLeiste-tr">Veröffentlichungsdatum</th>
             </tr>
           </thead>
+          <tbody>
           <tr>
             <td>
-              <a href="artikel1.html">Die Gerüchte Küche brodelt: GTA 6 noch vor dem <time>17. Mai 2023? </time> </a>
+              <Link to="Artikel/1">Die Gerüchte Küche brodelt: GTA 6 noch vor dem <time>17. Mai 2023? </time> </Link>
             </td>
             <td>Armo</td>
             <td>
@@ -38,9 +38,9 @@ function Startseite() {
           </tr>
           <tr>
             <td>
-              <a href="artikel2.html">
+              <Link to="Artikel/2">
                 Das neue Dragon Ball Z Budokai Tenkaichi 4:<br /> Nach 16 Jahren folgen endlich wieder Prügeleien
-              </a>
+              </Link>
             </td>
             <td>Racix</td>
             <td>
@@ -54,6 +54,7 @@ function Startseite() {
               <time>06.03.2023</time>
             </td>
           </tr>
+          </tbody>
         </table>
       </div>
     </div>

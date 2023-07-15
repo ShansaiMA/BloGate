@@ -7,14 +7,14 @@ function Favoriten() {
     <div className="content">
       <h2 className='Überschrifth2'> Favoriten </h2>
 
-      <table class="artikel_tabelle">
+      <table className="artikel_tabelle">
         <thead>
           <tr>
-            <th class="ÜberschriftenLeiste-tr">Artikelüberschrift</th>
-            <th class="ÜberschriftenLeiste-tr">Autor</th>
-            <th class="ÜberschriftenLeiste-tr">Bildvorschau</th>
-            <th class="ÜberschriftenLeiste-tr">Veröffentlichungsdatum</th>
-            <th class="ÜberschriftenLeiste-tr">Löschen</th>
+            <th className="ÜberschriftenLeiste-tr">Artikelüberschrift</th>
+            <th className="ÜberschriftenLeiste-tr">Autor</th>
+            <th className="ÜberschriftenLeiste-tr">Bildvorschau</th>
+            <th className="ÜberschriftenLeiste-tr">Veröffentlichungsdatum</th>
+            <th className="ÜberschriftenLeiste-tr">Löschen</th>
           </tr>
         </thead>
         <tbody id="tbodyinhalt">
