@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Zeichenzaehler = () => {
+const Zeichenzähler = () => {
   const [text, setText] = useState("");
   const [count, setCount] = useState(0);
 
@@ -11,12 +11,19 @@ const Zeichenzaehler = () => {
 
   return (
     <div>
-      <textarea onChange={handleChange} value={text}></textarea>
-      <p>Anzahl Zeichen: {count}</p>
+      <textarea
+        id="kommentar"
+        name="kommentar"
+        rows="20"
+        cols="80"
+        maxLength="300"
+        placeholder="Schreibe einen Kommentar"
+        onChange={handleChange}
+        value={text}
+      ></textarea>
+      <p>Anzahl Zeichen: {count}/300</p>
     </div>
   );
 };
 
-export default Zeichenzaehler;
-
-/*Athena*/ 
+export default Zeichenzähler;

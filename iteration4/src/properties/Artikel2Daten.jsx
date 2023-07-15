@@ -1,3 +1,6 @@
+
+import Zeichenzähler from '../Zeichenzähler';
+
 const Artikel2Daten = {
   
   content: 
@@ -60,10 +63,9 @@ const Artikel2Daten = {
           <label htmlFor="kommentar">
             <h3>Kommentar:</h3>
           </label>
-          <div>
-            Anzahl eingegebener Zeichen / Max. Anzahl Zeichen: <span id="zaehler">0</span>/300
           </div>
-          <textarea id="kommentar" name="kommentar" rows="20" cols="80" maxLength="300" placeholder="Schreibe einen Kommentar"></textarea>
+        <div>
+          <Zeichenzähler/>
         </div>
         <div>
           <button className="button" type="submit">Speichern</button>
