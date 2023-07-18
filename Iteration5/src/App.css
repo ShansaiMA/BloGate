@@ -24,10 +24,7 @@ body {
   margin: 0 auto;
   
 }
-.form-group {
-  margin: 30px;
-  margin-bottom: 16px;
-}
+
 main {
   width: 100vw;
   margin: 0 auto;
@@ -205,8 +202,8 @@ a:hover {
 /*         Content (alle Seiten aufgeteilt)        */
 
 .content {
-  width: 80%;
-  margin: 30px auto;
+  width: 60%;
+  margin-right: auto;
   background: linear-gradient(90deg, #f3f5f6, #eeecec);
   color: black;
   /* Selbe Farbe wie Body gemacht */

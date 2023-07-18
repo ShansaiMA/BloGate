@@ -10,59 +10,40 @@ function Startseite() {
       <br />
       <div className="row">
         <div className="col">
-          <table className="artikel_tabelle">
-            <thead>
-              <tr>
-                <th className="ÜberschriftenLeiste-tr">Artikelüberschrift</th>
-                <th className="ÜberschriftenLeiste-tr">Autor</th>
-                <th className="ÜberschriftenLeiste-tr">Bildvorschau</th>
-                <th className="ÜberschriftenLeiste-tr">Veröffentlichungsdatum</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <Link to="Artikel/1">
+          <div className="row">
+            <div className="col">
+              <Link to="Artikel/1" className="card">
+                <img
+                  src="./img/Artikel Fotos/Artikel 1.jpeg"
+                  alt="Profilbild von Armo"
+                  className="card-img-top"
+                />
+                <div className="card-body">
+                  <h5 className="card-title">
                     Die Gerüchte Küche brodelt: GTA 6 noch vor dem <time>17. Mai 2023?</time>
-                  </Link>
-                </td>
-                <td>Armo</td>
-                <td>
-                  <Link to="Artikel/1" target="_blank">
-                    <img
-                      src="./img/Artikel Fotos/Artikel 1.jpeg"
-                      alt="Profilbild von Armo"
-                      width="100"
-                    />
-                  </Link>
-                </td>
-                <td>
-                  <time>24.04.2023</time>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <Link to="Artikel/2">
-                    Das neue Dragon Ball Z Budokai Tenkaichi 4:<br />
-                    Nach 16 Jahren folgen endlich wieder Prügeleien
-                  </Link>
-                </td>
-                <td>Racix</td>
-                <td>
-                  <Link to="Artikel/2" target="_blank">
-                    <img
-                      src="./img/Artikel Fotos/Super Saiyajin Blue - Budokai Tenkaichi.png"
-                      alt="Hauptbild Dragon Ball"
-                      width="100"
-                    />
-                  </Link>
-                </td>
-                <td>
-                  <time>06.03.2023</time>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                  </h5>
+                  <p className="card-text">Autor: Armo</p>
+                  <p className="card-text">Veröffentlichungsdatum: 24.04.2023</p>
+                </div>
+              </Link>
+            </div>
+            <div className="col">
+              <Link to="Artikel/2" className="card">
+                <img
+                  src="./img/Artikel Fotos/Super Saiyajin Blue - Budokai Tenkaichi.png"
+                  alt="Hauptbild Dragon Ball"
+                  className="card-img-top"
+                />
+                <div className="card-body">
+                  <h5 className="card-title">
+                    Das neue Dragon Ball Z Budokai Tenkaichi 4: Nach 16 Jahren folgen endlich wieder Prügeleien
+                  </h5>
+                  <p className="card-text">Autor: Racix</p>
+                  <p className="card-text">Veröffentlichungsdatum: 06.03.2023</p>
+                </div>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
