@@ -1,5 +1,3 @@
-//ändern     //VAR geändert zu Const, da COde best practice
-
 //Variablen deklarieren und auf die DOM-Elemente mit der ID "kommentar" und "zaheler" zugreifen
 const kommentarTextfeld = document.getElementById("kommentar");
 const zaehler = document.getElementById("zaehler");
