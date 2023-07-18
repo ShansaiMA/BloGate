@@ -1,8 +1,26 @@
-@font-face { 
+@font-face {
     font-family: "Open-Sans";
-    src: url(); 
+    src: url();
 
 }
-*   { 
-    font-family: ""Open-Sans"";
+
+* {
+    font-family: "" Open-Sans"";
+}
+
+/* Klassen-Selektor: Tabellen Head */
+.zeileoben {
+    background: rgb(208, 155, 237);
+}
+
+/* ID-Selektor: Favoritenbutton */
+#Knopf {
+    background: rgb(102, 135, 233);
+}
+
+/* Elementar-Typ-Selektor: Div Element auf Artikelseite*/
+div {
+
+    font-size: 15px;
+    font-style: italic;
 }

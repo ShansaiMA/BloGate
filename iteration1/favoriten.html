@@ -1,67 +1,82 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-      <meta charset="utf-8" >
-      <meta name="viewport" content="width=device-width" />
-        <title>Favoritenseite</title>
-        <style>
-          body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #F3F5F6;
-          }
-        </style>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>Favoritenseite</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #F3F5F6;
+    }
+  </style>
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+</head>
+
+<body>
+  <header>
+    <a href="startseite.html">
+      <img src="../img/Transparentes Logo.png" alt="Logo der Webseite" width="300">
+    </a>
+    <h1>Favoritenseite</h1>
+  </header>
+
+  <section>
+    <nav>
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="startseite.html">Startseite</a></li>
+        <li><a href="favoriten.html">Favoritenseite</a></li>
+      </ul>
+    </nav>
+  </section>
 
 
-    </head>
-    <body>
-      <header>
-      <a href="startseite.html">
-        <img src="../img/Transparentes Logo.png" alt="Logo der Webseite"
-        width="300">
-      </a>
-        <h1>Favoritenseite</h1>
-      </header>
+
+  <table border="3">
+    <thead>
+      <tr>
+        <th class="zeileoben">Artikelüberschrift</th>
+        <th class="zeileoben">Autor</th>
+        <th class="zeileoben">Bildvorschau</th>
+        <th class="zeileoben">Veröffentlichungsdatum</th>
+        <th class="zeileoben">Löschen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="artikel1.html">Die Gerüchte Küche brodelt: GTA 6 noch vor dem <time>17. Mai 2023? </time></a></td>
+        <td>Armo</td>
+        <td><img src="../img/Artikel Fotos/Artikel 1.jpeg" alt="Profilbild von Armo" width="100"></td>
+        <td><time>24.04.2023</time></td>
+        <td><button onclick="deleteArticle(this)"><span>&#128465;</span> Artikel entfernen</button></td>
+      </tr>
+      <tr>
+        <td><a href="artikel2.html">Das neue Dragon Ball Z Budokai Tenkaichi 4:<br> Nach 16 Jahren folgen endlich wieder
+            Prügeleien</a> </td>
+        <td>Racix</td>
+        <td><img src="../img/Artikel Fotos/Super Saiyajin Blue - Budokai Tenkaichi.png" alt="Hauptbild Dragon Ball"
+            width="100"></td>
+        <td><time>06.03.2023</time></td>
+
+        <td><button onclick="deleteArticle(this)"><span>&#128465;</span> Artikel entfernen</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function deleteArticle(button) {
+      const row = button.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+    }
+  </script>
 
 
+  </div>
 
-        <table border="3">
-            <thead>
-              <tr>
-                <th>Artikelüberschrift</th>
-                <th>Autor</th>
-                <th>Bildvorschau</th>
-                <th>Veröffentlichungsdatum</th>
-                <th>Löschen</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Die Gerüchte Küche brodelt: GTA 6 noch vor dem <time>17. Mai 2023? </time></td>
-                <td>Armo</td>
-                <td><img src="../img/Artikel Fotos/Riley Freeman.jpg" alt="Profilbild von Armo" width="75"></td>
-                <td><time>24.04.2023</time></td>
-                <td><button onclick="deleteArticle(this)"><span>&#128465;</span> Artikel entfernen</button></td>
-              </tr>
-              <tr>
-                <td>Das neue Dragon Ball Z Budokai Tenkaichi 4:<br> Nach 16 Jahren folgen endlich wieder Prügeleien</td>
-                <td>Racix</td>
-                <td><img src="../img/Artikel Fotos/Super Saiyajin Blue - Budokai Tenkaichi.png" alt="Hauptbild Dragon Ball" width="100" ></td>
-                <td><time>06.03.2023</time></td>
-                
-                <td><button onclick="deleteArticle(this)"><span>&#128465;</span> Artikel entfernen</button></td>
-              </tr>
-            </tbody>
-          </table>
-          
-          <script>
-          function deleteArticle(button) {
-            const row = button.parentNode.parentNode;
-            row.parentNode.removeChild(row);
-          }
-          </script>
-    
+</body>
 
-        </div>
-          
-     </body>
 </html>

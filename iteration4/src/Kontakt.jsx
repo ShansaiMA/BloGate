@@ -10,6 +10,7 @@ function Kontakt() {
       <form>
         <fieldset>
           <table>
+            <tbody>
             <tr>
               <td><label htmlFor="vorname">Vorname</label></td>
               <td><input type="text" id="vorname" name="vorname" placeholder="Vorname" maxLength="40" pattern="[a-zA-Z]{2,}" /></td>
@@ -48,6 +49,7 @@ function Kontakt() {
             <tr>
               <td><em>* Pflichtfelder</em></td>
             </tr>
+            </tbody>
           </table>
         </fieldset>
         <fieldset>
