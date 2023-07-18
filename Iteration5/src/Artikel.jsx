@@ -20,7 +20,6 @@ const Artikel = ({ addToFavoriten }) => {
     if (addToFavoriten) {
       addToFavoriten({
         id,
-        url: articleData.url,
         titel: articleData.titel,
         autor: articleData.autor,
         bild_url: articleData.bild_url,
@@ -29,7 +28,6 @@ const Artikel = ({ addToFavoriten }) => {
       setIsFavorit(true);
       console.log('Artikel wurde zu Favoriten hinzugefügt:', {
         id,
-        url: articleData.url,
         titel: articleData.titel,
         autor: articleData.autor,
         bild_url: articleData.bild_url,
@@ -46,7 +44,7 @@ const Artikel = ({ addToFavoriten }) => {
     <div>
       {articleData ? (
         <div>
-          {articleData.content}
+          <p>{articleData.content}</p>
           {isFavorit ? (
             <button
               className="button"
@@ -58,9 +56,9 @@ const Artikel = ({ addToFavoriten }) => {
           ) : (
             <button
               className="button"
-              onClick={handleFavoritenClick}
+              onClick={handleFavoritenClick} // Überprüfen Sie, ob der Button diese Funktion aufruft
               id="Favoritenbutton"
-            >
+            > 
               Zu Favoriten hinzufügen
             </button>
           )}

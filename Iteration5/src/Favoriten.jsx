@@ -1,4 +1,6 @@
+// Favoriten.jsx
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 
 function Favoriten({ favoriten, removeFromFavoriten }) {
   console.log(favoriten);
@@ -12,10 +14,9 @@ function Favoriten({ favoriten, removeFromFavoriten }) {
   };
 
   return (
-    <div className="content">
-      <h2 className="Überschrifth2">Favoriten</h2>
-
-      {favoriten.length > 0 ? (
+    <Container>
+      <div className="content">
+        <h2 className="Überschrifth2">Favoriten</h2>
         <table className="artikel_tabelle">
           <thead>
             <tr>
@@ -29,15 +30,7 @@ function Favoriten({ favoriten, removeFromFavoriten }) {
           <tbody>
             {favoriten.map((artikel) => (
               <tr key={artikel.id}>
-                <td>
-                  <a
-                    href={artikel.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {artikel.titel}
-                  </a>
-                </td>
+                <td>{artikel.titel}</td>
                 <td>{artikel.autor}</td>
                 <td>
                   <img
@@ -60,10 +53,8 @@ function Favoriten({ favoriten, removeFromFavoriten }) {
             ))}
           </tbody>
         </table>
-      ) : (
-        <p>Keine Favoriten vorhanden</p>
-      )}
-    </div>
+      </div>
+    </Container>
   );
 }
 

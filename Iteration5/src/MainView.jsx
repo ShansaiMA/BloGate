@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Startseite from './Startseite';
 import Artikel from './Artikel';
@@ -13,7 +13,7 @@ function MainView() {
   const addToFavoriten = (artikel) => {
     setFavoriten((prevFavoriten) => {
       const isAlreadyAdded = prevFavoriten.find((item) => item.id === artikel.id);
-
+      
       if (!isAlreadyAdded) {
         return [...prevFavoriten, artikel];
       }
@@ -28,23 +28,34 @@ function MainView() {
     );
   };
 
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Startseite />} />
-        <Route
-          path="/artikel/:id"
-          element={<Artikel addToFavoriten={addToFavoriten} />}
-        />
-        <Route
-          path="/favoriten"
-          element={<Favoriten favoriten={favoriten} removeFromFavoriten={removeFromFavoriten} />}
-        />
+  useEffect(() => {
+    console.log('favoriten aktualisiert:', favoriten);
+  }, [favoriten]);
 
-        <Route path="/impressum" element={<Impressum />} />
-        <Route path="/kontakt" element={<Kontakt />} />
-      </Routes>
-    </BrowserRouter>
+  return (
+    <main>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Startseite />} />
+          <Route
+            path="/artikel/:id"
+            element={<Artikel addToFavoriten={addToFavoriten} />}
+          />
+          <Route
+            path="/favoriten"
+            element={
+              <Favoriten
+                favoriten={favoriten}
+                removeFromFavoriten={removeFromFavoriten}
+              />
+            }
+          />
+
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/kontakt" element={<Kontakt />} />
+        </Routes>
+      </BrowserRouter>
+    </main>
   );
 }
 
