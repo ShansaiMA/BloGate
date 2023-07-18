@@ -7,6 +7,7 @@
    box-sizing: border-box;
    font-family: "Open-Sans";
    background-color: #F3F5F6;
+
  }
 
  /* Notes: An manchen Stellen ist die Farbe anders (z.B Figurelement) -  Anpassen dass bei Seite kleiner machen alles drauf ist, mäßig minimieren - Blaue Verweis Farbe wechseln  */
@@ -161,8 +162,8 @@
    padding: 8px;
  }
 
- .ÜberschriftenLeiste-tr{
-  background-color: #7297bb;
+ .ÜberschriftenLeiste-tr {
+   background-color: #7297bb;
  }
 
  #content {
