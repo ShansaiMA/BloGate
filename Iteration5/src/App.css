@@ -47,7 +47,6 @@ a:hover {
 }
 
 .logo {
-  display: flex;
   align-items: center;
   justify-content: center;
   background-color: #f3f5f6;
@@ -77,11 +76,13 @@ a:hover {
 
 .navigation {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   padding: 20px;
+  margin-left: -50px;
 }
 
 .nav_links {
+  margin-right: 450px;
   list-style: none;
   display: flex;
 }

@@ -79,6 +79,9 @@ const Artikel2Daten = {
       <strong>Themenbereich:</strong> Dragon Ball Budokai Tenkaichi, Gaming,
       Anime, Bandai Namco <br />
       <br />
+      <button className="button" id="Favoritenbutton">
+        <span className="emojis">&#x2764;</span> Zu Favoriten hinzufügen
+      </button>
       <br />
       <br />
       Anzahl Personen, die den Blog-Artikel zu ihrer Favoritenliste hinzugefügt

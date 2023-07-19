@@ -64,6 +64,9 @@ const Artikel1Daten = {
       </p>
       <strong> Themenbereich:</strong> Gaming, GTA 6, Leaks, Release <br />
       <br />
+      <button className="button" id="Favoritenbutton">
+        <span className="emojis">&#x2764;</span> Zu Favoriten hinzufügen
+      </button>
       <p>
         Anzahl Personen, die den Blog-Artikel zu ihrer Favoritenliste
         hinzugefügt haben: 2
