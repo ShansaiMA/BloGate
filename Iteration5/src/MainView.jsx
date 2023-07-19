@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Startseite from './Startseite';
-import Artikel from './Artikel';
-import Favoriten from './Favoriten';
-import Impressum from './Impressum';
-import Kontakt from './Kontakt';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Startseite from "./Startseite";
+import Artikel from "./Artikel";
+import Favoriten from "./Favoriten";
+import Impressum from "./Impressum";
+import Kontakt from "./Kontakt";
+import "./App.css";
 
 function MainView() {
   const [favoriten, setFavoriten] = useState([]);
 
   const addToFavoriten = (artikel) => {
     setFavoriten((prevFavoriten) => {
-      const isAlreadyAdded = prevFavoriten.find((item) => item.id === artikel.id);
-      
+      const isAlreadyAdded = prevFavoriten.find(
+        (item) => item.id === artikel.id
+      );
+
       if (!isAlreadyAdded) {
         return [...prevFavoriten, artikel];
       }
@@ -29,7 +31,7 @@ function MainView() {
   };
 
   useEffect(() => {
-    console.log('favoriten aktualisiert:', favoriten);
+    console.log("favoriten aktualisiert:", favoriten);
   }, [favoriten]);
 
   return (

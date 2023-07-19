@@ -16,5 +16,3 @@ function zuFavoritenHinzufuegen(artikel) {
     localStorage.setItem("favoriten", JSON.stringify([artikel]));
   }
 }
-
-

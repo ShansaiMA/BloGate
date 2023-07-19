@@ -1,5 +1,5 @@
-import './App.css';
-import React, { useState } from 'react';
+import "./App.css";
+import React, { useState } from "react";
 
 const Rating = ({ stars, clickHandler }) => {
   const [hoveredRating, setHoveredRating] = useState(0);
@@ -16,7 +16,7 @@ const Rating = ({ stars, clickHandler }) => {
     if (clickHandler) {
       clickHandler(rating);
     }
-    console.log('Ausgewähltes Rating:', rating); // Rating in der Konsole ausgeben
+    console.log("Ausgewähltes Rating:", rating); // Rating in der Konsole ausgeben
   };
 
   const renderStars = () => {
@@ -25,7 +25,9 @@ const Rating = ({ stars, clickHandler }) => {
 
     for (let i = 1; i <= maxRating; i++) {
       const starClass =
-        i <= (hoveredRating || selectedRating) ? 'aktiver-Stern' : 'leerer-Stern'; //CSS Namen gleichzeitig
+        i <= (hoveredRating || selectedRating)
+          ? "aktiver-Stern"
+          : "leerer-Stern"; //CSS Namen gleichzeitig
 
       starIcons.push(
         <span

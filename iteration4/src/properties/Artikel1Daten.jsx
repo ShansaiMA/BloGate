@@ -1,24 +1,28 @@
 // Artikel1Daten.jsx
-import Zeichenzähler from '../Zeichenzähler';
-import Rating from '../Rating';
+import Zeichenzähler from "../Zeichenzähler";
+import Rating from "../Rating";
 
-const Artikel1Daten = { 
-  id: '1',
+const Artikel1Daten = {
+  id: "1",
   url: "/artikel1",
   titel: "Die Gerüchte Küche brodelt: GTA 6 noch vor dem 17. Mai 2023?",
   autor: "Armo",
-  bild_url: "../img/Artikel Fotos/Artikel 1.jpeg",         
+  bild_url: "../img/Artikel Fotos/Artikel 1.jpeg",
   datum: "24.04.2023",
   content: (
     <div className="content">
       <h1>Die Gerüchte Küche brodelt: GTA 6 noch vor dem 17. Mai 2023?</h1>
       <h4>Hat das Warten ein Ende?</h4>
-      Von <strong>Armo</strong> | <time>24.04.2023</time> |
-      Durchschnittliche Lesezeit: 3 Min. | Kommentare (6)
+      Von <strong>Armo</strong> | <time>24.04.2023</time> | Durchschnittliche
+      Lesezeit: 3 Min. | Kommentare (6)
       <br />
       <br />
       <figure className="figurebild">
-        <img src="../img/Artikel Fotos/Artikel 1.jpeg" height="450px" width="800px" />
+        <img
+          src="../img/Artikel Fotos/Artikel 1.jpeg"
+          height="450px"
+          width="800px"
+        />
         <figcaption>© GTA 6 - Design</figcaption>
       </figure>
       <article>
@@ -41,7 +45,11 @@ const Artikel1Daten = {
       </article>
       <strong> Autor:</strong> Armo <br />
       <figure className="figurebild">
-        <img src="../img/Artikel Fotos/Riley Freeman.jpg" alt="GTA 6" width="100" />
+        <img
+          src="../img/Artikel Fotos/Riley Freeman.jpg"
+          alt="GTA 6"
+          width="100"
+        />
         <br />
       </figure>
       <p>
@@ -56,15 +64,17 @@ const Artikel1Daten = {
       </p>
       <strong> Themenbereich:</strong> Gaming, GTA 6, Leaks, Release <br />
       <br />
-      
-      <p>Anzahl Personen, die den Blog-Artikel zu ihrer Favoritenliste hinzugefügt haben: 2</p>
+      <p>
+        Anzahl Personen, die den Blog-Artikel zu ihrer Favoritenliste
+        hinzugefügt haben: 2
+      </p>
       <form>
         <fieldset className="KommentarFormular">
           <legend>
             <h2>Sprich Dich aus</h2>
           </legend>
           <div>
-            <Rating/>
+            <Rating />
           </div>
           <div>
             <label htmlFor="kommentar">
@@ -72,7 +82,7 @@ const Artikel1Daten = {
             </label>
           </div>
           <div>
-            <Zeichenzähler/>
+            <Zeichenzähler />
           </div>
           <div>
             <button className="button" type="submit">

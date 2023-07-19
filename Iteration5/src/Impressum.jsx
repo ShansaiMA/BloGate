@@ -1,6 +1,6 @@
-import React from 'react';
-import { Card } from 'react-bootstrap';
-import './App.css';
+import React from "react";
+import { Card } from "react-bootstrap";
+import "./App.css";
 
 function Impressum() {
   return (
@@ -13,10 +13,13 @@ function Impressum() {
             <Card className="impressum-card">
               <Card.Body>
                 <Card.Title>
-                  <a href="mailto:shansai@stud.hs-ruhrwest.de">Shansai Mahendran</a>
+                  <a href="mailto:shansai@stud.hs-ruhrwest.de">
+                    Shansai Mahendran
+                  </a>
                 </Card.Title>
                 <Card.Text>
-                  Studiengang: E-Commerce<br />
+                  Studiengang: E-Commerce
+                  <br />
                   Hochschule: HRW
                 </Card.Text>
               </Card.Body>
@@ -27,10 +30,13 @@ function Impressum() {
             <Card className="impressum-card">
               <Card.Body>
                 <Card.Title>
-                  <a href="mailto:armend@stud.hs-ruhrwest.de">Armend Ukzmaili</a>
+                  <a href="mailto:armend@stud.hs-ruhrwest.de">
+                    Armend Ukzmaili
+                  </a>
                 </Card.Title>
                 <Card.Text>
-                  Studiengang: E-Commerce<br />
+                  Studiengang: E-Commerce
+                  <br />
                   Hochschule: HRW
                 </Card.Text>
               </Card.Body>

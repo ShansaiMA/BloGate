@@ -1,12 +1,9 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 const Haupt = () => {
-  return ( /* <main> muss vielleicht zu <HauptMain> geändert werden, nachschauen */
-    <main>
-      { }
-    </main>
-  );
+  return <main>{}</main>;
 };
 
 export default HauptMain;
+// Keine Verwendung 

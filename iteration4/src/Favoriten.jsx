@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 function Favoriten({ favoriten, removeFromFavoriten }) {
   console.log(favoriten);
   console.log(removeFromFavoriten);
 
   const handleFavoritRemove = (artikel) => {
-    console.log('Artikel entfernen:', artikel);
+    console.log("Artikel entfernen:", artikel);
     if (removeFromFavoriten) {
       removeFromFavoriten(artikel);
     }
@@ -43,7 +43,7 @@ function Favoriten({ favoriten, removeFromFavoriten }) {
                   <img
                     src={artikel.bild_url}
                     alt="Bildvorschau"
-                    style={{ maxWidth: '100px' }}
+                    style={{ maxWidth: "100px" }}
                   />
                 </td>
                 <td>{artikel.datum}</td>

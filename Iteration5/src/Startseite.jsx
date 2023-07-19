@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.css';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "./App.css";
+import { Link } from "react-router-dom";
 
 function Startseite() {
   return (
@@ -20,10 +20,13 @@ function Startseite() {
                 />
                 <div className="card-body">
                   <h5 className="card-title">
-                    Die Gerüchte Küche brodelt: GTA 6 noch vor dem <time>17. Mai 2023?</time>
+                    Die Gerüchte Küche brodelt: GTA 6 noch vor dem{" "}
+                    <time>17. Mai 2023?</time>
                   </h5>
                   <p className="card-text">Autor: Armo</p>
-                  <p className="card-text">Veröffentlichungsdatum: 24.04.2023</p>
+                  <p className="card-text">
+                    Veröffentlichungsdatum: 24.04.2023
+                  </p>
                 </div>
               </Link>
             </div>
@@ -36,10 +39,13 @@ function Startseite() {
                 />
                 <div className="card-body">
                   <h5 className="card-title">
-                    Das neue Dragon Ball Z Budokai Tenkaichi 4: Nach 16 Jahren folgen endlich wieder Prügeleien
+                    Das neue Dragon Ball Z Budokai Tenkaichi 4: Nach 16 Jahren
+                    folgen endlich wieder Prügeleien
                   </h5>
                   <p className="card-text">Autor: Racix</p>
-                  <p className="card-text">Veröffentlichungsdatum: 06.03.2023</p>
+                  <p className="card-text">
+                    Veröffentlichungsdatum: 06.03.2023
+                  </p>
                 </div>
               </Link>
             </div>

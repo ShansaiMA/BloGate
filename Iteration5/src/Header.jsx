@@ -1,11 +1,10 @@
-import React from 'react';
-import './App.css';
-import LogoBild from '/img/Transparentes Logo.png';
+import React from "react";
+import "./App.css";
+import LogoBild from "/img/Transparentes Logo.png";
 
 function Header() {
   return (
     <header className="header">
-
       <div className="logo">
         <a href="/">
           <img src={LogoBild} alt="Logo der Webseite" width="300" />
@@ -14,14 +13,23 @@ function Header() {
 
       <nav className="navigation">
         <ul className="nav_links">
-
-          <li><a href="/">Startseite</a></li>
-          <li><a href="/favoriten">Favoriten</a></li>
-          <li><a href="/impressum">Impressum</a></li>
+          <li>
+            <a href="/">Startseite</a>
+          </li>
+          <li>
+            <a href="/favoriten">Favoriten</a>
+          </li>
+          <li>
+            <a href="/impressum">Impressum</a>
+          </li>
         </ul>
-        <div className='NavAll'>
+        <div className="NavAll">
           <ul className="nav_links2">
-            <li><a className="csa" href="/Kontakt">Kontakt</a></li>
+            <li>
+              <a className="csa" href="/Kontakt">
+                Kontakt
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -30,4 +38,3 @@ function Header() {
 }
 
 export default Header;
-

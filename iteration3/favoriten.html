@@ -1,145 +1,132 @@
 <!DOCTYPE html>
 <html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Favoriten</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width" />
-  <title>Favoriten</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-  <div class="logo">
-    <a href="startseite.html">
-      <img src="../img/Transparentes Logo.png" alt="Logo der Webseite" width="300">
-    </a>
-  </div>
-  <header class="header">
-    <nav class="navigation">
-      <ul class="nav_links">
-        <li><a href="startseite.html">Startseite</a></li>
-        <li><a href="favoriten.html">Favoriten</a></li>
-        <li><a href="impressum.html">Impressum</a></li>
-      </ul>
-      <a class="csa" href="kontakt.html">Kontakt</a>
-    </nav>
-  </header>
-
-  <div id="content">
-    <h2> Favoriten </h2>
-    <br>
-    <table class="artikel_tabelle">
-      <thead>
-        <tr>
-          <th class="ÜberschriftenLeiste-tr">Artikelüberschrift</th>
-          <th class="ÜberschriftenLeiste-tr">Autor</th>
-          <th class="ÜberschriftenLeiste-tr">Bildvorschau</th>
-          <th class="ÜberschriftenLeiste-tr">Veröffentlichungsdatum</th>
-          <th class="ÜberschriftenLeiste-tr">Löschen</th>
-        </tr>
-      </thead>
-      <tbody id="tbodyinhalt">
-
-      </tbody>
-    </table>
-
-
-  </div>
-
-  <footer class="footer">
-    <div class="fußbereich">
-      © Shansai Mahendran, Armend Ukzmaili - 2023
+  <body>
+    <div class="logo">
+      <a href="startseite.html">
+        <img
+          src="../img/Transparentes Logo.png"
+          alt="Logo der Webseite"
+          width="300"
+        />
+      </a>
     </div>
-  </footer>
+    <header class="header">
+      <nav class="navigation">
+        <ul class="nav_links">
+          <li><a href="startseite.html">Startseite</a></li>
+          <li><a href="favoriten.html">Favoriten</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+        <a class="csa" href="kontakt.html">Kontakt</a>
+      </nav>
+    </header>
 
-  <script>
+    <div id="content">
+      <h2>Favoriten</h2>
+      <br />
+      <table class="artikel_tabelle">
+        <thead>
+          <tr>
+            <th class="ÜberschriftenLeiste-tr">Artikelüberschrift</th>
+            <th class="ÜberschriftenLeiste-tr">Autor</th>
+            <th class="ÜberschriftenLeiste-tr">Bildvorschau</th>
+            <th class="ÜberschriftenLeiste-tr">Veröffentlichungsdatum</th>
+            <th class="ÜberschriftenLeiste-tr">Löschen</th>
+          </tr>
+        </thead>
+        <tbody id="tbodyinhalt"></tbody>
+      </table>
+    </div>
 
-    const favoriten = JSON.parse(localStorage.getItem('favoriten')) || [];
+    <footer class="footer">
+      <div class="fußbereich">© Shansai Mahendran, Armend Ukzmaili - 2023</div>
+    </footer>
 
-    // Tabellelement auswählen
-    const tbody = document.getElementById('tbodyinhalt');
+    <script>
+      const favoriten = JSON.parse(localStorage.getItem("favoriten")) || [];
 
-    // Schleife durch die Favoriten-Array
-    favoriten.forEach((favorit) => {
-      // Neue Tabellenzeile erstellen
-      const row = document.createElement('tr');
+      // Tabellelement auswählen
+      const tbody = document.getElementById("tbodyinhalt");
 
-      //Titelzelle
-      const titelCell = document.createElement('td');
-      const artikelLink = document.createElement('a');
-      artikelLink.href = favorit.url;
-      artikelLink.textContent = favorit.titel;
-      artikelLink.target = '_blank'; // Neuer Tab wird geöffnet, sobald der Link angeklickt wird
-      titelCell.appendChild(artikelLink);
-      row.appendChild(titelCell);
+      // Schleife durch die Favoriten-Array
+      favoriten.forEach((favorit) => {
+        // Neue Tabellenzeile erstellen
+        const row = document.createElement("tr");
 
-      //Autorzelle
-      const autorCell = document.createElement('td');
-      autorCell.textContent = favorit.autor;
-      row.appendChild(autorCell);
+        //Titelzelle
+        const titelCell = document.createElement("td");
+        const artikelLink = document.createElement("a");
+        artikelLink.href = favorit.url;
+        artikelLink.textContent = favorit.titel;
+        artikelLink.target = "_blank"; // Neuer Tab wird geöffnet, sobald der Link angeklickt wird
+        titelCell.appendChild(artikelLink);
+        row.appendChild(titelCell);
 
+        //Autorzelle
+        const autorCell = document.createElement("td");
+        autorCell.textContent = favorit.autor;
+        row.appendChild(autorCell);
 
-      // Bildzelle
-      const bildCell = document.createElement('td');
-      // Link zur Artikelseite für das Bild
-      const bildLink = document.createElement('a');
-      bildLink.href = favorit.url; // Verwendet den Artikel-URL aus den Favoriten
-      bildLink.target = '_blank'; // Öffnet den Link in einem neuen Tab
-      // Bildvorschau
-      const bildVorschau = document.createElement('img');
-      bildVorschau.src = favorit.bild_url;
-      bildVorschau.alt = 'Bildvorschau';
-      bildVorschau.style.maxWidth = '100px';
-      // Das Bild zur Artikelseite verlinken
-      bildLink.appendChild(bildVorschau);
-      bildCell.appendChild(bildLink);
-      row.appendChild(bildCell);
+        // Bildzelle
+        const bildCell = document.createElement("td");
+        // Link zur Artikelseite für das Bild
+        const bildLink = document.createElement("a");
+        bildLink.href = favorit.url; // Verwendet den Artikel-URL aus den Favoriten
+        bildLink.target = "_blank"; // Öffnet den Link in einem neuen Tab
+        // Bildvorschau
+        const bildVorschau = document.createElement("img");
+        bildVorschau.src = favorit.bild_url;
+        bildVorschau.alt = "Bildvorschau";
+        bildVorschau.style.maxWidth = "100px";
+        // Das Bild zur Artikelseite verlinken
+        bildLink.appendChild(bildVorschau);
+        bildCell.appendChild(bildLink);
+        row.appendChild(bildCell);
 
-      const datumCell = document.createElement('td');
-      datumCell.textContent = favorit.datum;
-      row.appendChild(datumCell);
+        const datumCell = document.createElement("td");
+        datumCell.textContent = favorit.datum;
+        row.appendChild(datumCell);
 
+        //Lösch-Button
+        const deleteCell = document.createElement("td");
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Löschen";
+        deleteButton.addEventListener("click", () => {
+          // Entfernen des Artikels aus Favoriten
+          removeFromFavorites(favorit);
 
-      //Lösch-Button
-      const deleteCell = document.createElement('td');
-      const deleteButton = document.createElement('button');
-      deleteButton.textContent = 'Löschen';
-      deleteButton.addEventListener('click', () => {
-        // Entfernen des Artikels aus Favoriten
-        removeFromFavorites(favorit);
+          // Entfernen der Tablerow in der Tabelle
+          tbody.removeChild(row);
+        });
+        deleteCell.appendChild(deleteButton);
+        row.appendChild(deleteCell);
 
-        // Entfernen der Tablerow in der Tabelle
-        tbody.removeChild(row);
+        // Tabellenzeile zur Tabelle hinzufügen
+        tbody.appendChild(row);
       });
-      deleteCell.appendChild(deleteButton);
-      row.appendChild(deleteCell);
 
+      function removeFromFavorites(favorit) {
+        // Favoriten aus dem localStorage abrufen
+        const favoriten = JSON.parse(localStorage.getItem("favoriten")) || [];
 
+        // Index des zu entfernenden Favoriten finden
+        const index = favoriten.findIndex((item) => item.url === favorit.url);
 
-      // Tabellenzeile zur Tabelle hinzufügen
-      tbody.appendChild(row);
-    });
+        if (index !== -1) {
+          // Favoriten aus dem Array entfernen
+          favoriten.splice(index, 1);
 
-    function removeFromFavorites(favorit) {
-      // Favoriten aus dem localStorage abrufen
-      const favoriten = JSON.parse(localStorage.getItem('favoriten')) || [];
-
-      // Index des zu entfernenden Favoriten finden
-      const index = favoriten.findIndex((item) => item.url === favorit.url);
-
-      if (index !== -1) {
-        // Favoriten aus dem Array entfernen
-        favoriten.splice(index, 1);
-
-        // Aktualisierte Favoriten im localStorage speichern
-        localStorage.setItem('favoriten', JSON.stringify(favoriten));
+          // Aktualisierte Favoriten im localStorage speichern
+          localStorage.setItem("favoriten", JSON.stringify(favoriten));
+        }
       }
-    }
-
-
-
-
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

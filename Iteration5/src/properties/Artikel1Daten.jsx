@@ -1,9 +1,9 @@
 // Artikel1Daten.jsx
-import Zeichenzähler from '../Zeichenzähler';
-import Rating from '../Rating';
+import Zeichenzähler from "../Zeichenzähler";
+import Rating from "../Rating";
 
 const Artikel1Daten = {
-  id: '1',
+  id: "1",
   url: "/artikel1",
   titel: "Die Gerüchte Küche brodelt: GTA 6 noch vor dem 17. Mai 2023?",
   autor: "Armo",
@@ -13,12 +13,16 @@ const Artikel1Daten = {
     <div className="content">
       <h1>Die Gerüchte Küche brodelt: GTA 6 noch vor dem 17. Mai 2023?</h1>
       <h4>Hat das Warten ein Ende?</h4>
-      Von <strong>Armo</strong> | <time>24.04.2023</time> |
-      Durchschnittliche Lesezeit: 3 Min. | Kommentare (6)
+      Von <strong>Armo</strong> | <time>24.04.2023</time> | Durchschnittliche
+      Lesezeit: 3 Min. | Kommentare (6)
       <br />
       <br />
       <figure className="figurebild">
-        <img src="../img/Artikel Fotos/Artikel 1.jpeg" height="450px" width="800px" />
+        <img
+          src="../img/Artikel Fotos/Artikel 1.jpeg"
+          height="450px"
+          width="800px"
+        />
         <figcaption>© GTA 6 - Design</figcaption>
       </figure>
       <article>
@@ -41,7 +45,11 @@ const Artikel1Daten = {
       </article>
       <strong> Autor:</strong> Armo <br />
       <figure className="figurebild">
-        <img src="../img/Artikel Fotos/Riley Freeman.jpg" alt="GTA 6" width="100" />
+        <img
+          src="../img/Artikel Fotos/Riley Freeman.jpg"
+          alt="GTA 6"
+          width="100"
+        />
         <br />
       </figure>
       <p>
@@ -59,7 +67,10 @@ const Artikel1Daten = {
       <button className="button" id="Favoritenbutton">
         <span className="emojis">&#x2764;</span> Zu Favoriten hinzufügen
       </button>
-      <p>Anzahl Personen, die den Blog-Artikel zu ihrer Favoritenliste hinzugefügt haben: 2</p>
+      <p>
+        Anzahl Personen, die den Blog-Artikel zu ihrer Favoritenliste
+        hinzugefügt haben: 2
+      </p>
       <form>
         <fieldset className="KommentarFormular">
           <legend>
@@ -83,7 +94,6 @@ const Artikel1Daten = {
           </div>
         </fieldset>
       </form>
-
     </div>
   ),
 };

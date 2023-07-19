@@ -1,56 +1,44 @@
-/* styles.css */
-
 .root {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 * {
-  font-family: 'Open Sans', sans-serif;
-
+  font-family: "Open Sans", sans-serif;
 }
 
-/* Notes: An manchen Stellen ist die Farbe anders (z.B Figurelement) -  Anpassen dass bei Seite kleiner machen alles drauf ist, mäßig minimieren - Blaue Verweis Farbe wechseln 
-windows taste + "." = EMOJIS */
-
 body {
-  /* Noch Farbe ändern (Weiss mit Grau), in der Mtite ist die Farbe noch anders neben der Produkttabelle usw. */
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background: linear-gradient(90deg, #f3f5f6, #eeecec);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 0 auto;
-  
 }
 
 main {
   width: 100vw;
   margin: 0 auto;
-  /* padding: 30px 20px; */
 }
 
 header,
 main,
 footer {
   margin: 30px auto;
-  /* margin-top: max(30px, auto); machen für das obere*/
 }
 
-/* Navigation-Bar / Changen bis CSA Hover */
+/* Navigation-Bar */
 .header {
   display: flex;
   flex-direction: row;
   background-color: #f3f5f6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
 }
 
 a {
   text-decoration: none;
   color: #336699;
-
 }
 
 a:hover {
@@ -66,7 +54,6 @@ a:hover {
   padding: 10px;
 
   /* Selbe Farbe wie Body gemacht */
-
 }
 
 .logo img {
@@ -74,14 +61,12 @@ a:hover {
   max-width: 100%;
   height: auto;
   /* padding-left: 620px; (Entfernt um Logo Bug zu fixen) */
-
 }
 
 .logo :hover {
   transform: translateX(10px);
-  transition: transform 2.0s ease;
+  transition: transform 2s ease;
 }
-
 
 .NavAll {
   display: flex;
@@ -99,8 +84,6 @@ a:hover {
 .nav_links {
   list-style: none;
   display: flex;
-
-
 }
 
 .nav_links li {
@@ -116,10 +99,7 @@ a:hover {
   /* Animation Schatten */
   padding: 6px 8px;
   /* Für den ,,Rahmen" beim hover */
-
-
 }
-
 
 /* ----------- Navigations Links im Header Hover -------- */
 .nav_links a:hover {
@@ -128,11 +108,9 @@ a:hover {
 }
 
 .nav_links2 {
-
   list-style: none;
   margin-left: auto;
 }
-
 
 /* ----------- Kontakt Button ---------- */
 .csa {
@@ -155,7 +133,6 @@ a:hover {
 }
 
 .button {
-
   text-decoration: none;
   color: #fff;
   background-color: #336699;
@@ -169,8 +146,6 @@ a:hover {
 }
 
 .Überschrifth1 {
-  /*noch nicht Überall Überschriften verändert... className="#" */
-
   color: black;
   font-weight: bold;
 }
@@ -197,8 +172,6 @@ a:hover {
   color: white;
 }
 
-
-
 /*         Content (alle Seiten aufgeteilt)        */
 
 .content {
@@ -207,7 +180,6 @@ a:hover {
   background: linear-gradient(90deg, #f3f5f6, #eeecec);
   color: black;
   /* Selbe Farbe wie Body gemacht */
-  /*margin: auto; */
 }
 
 .content-impressum {
@@ -215,7 +187,6 @@ a:hover {
   margin: 10px auto;
   margin-left: 20px;
   box-shadow: 10px 10px 15px silver;
-  
 }
 
 /*        Sterne-Bewertung         */
@@ -234,8 +205,6 @@ a:hover {
   color: #c33ced;
 }
 
-
-
 /*         Kommentarbereich         */
 
 .KommentarFormular {
@@ -247,9 +216,6 @@ a:hover {
   margin: auto;
 }
 
-
-
-
 /*        Autorenbox       */
 
 .autorenbox {
@@ -260,9 +226,7 @@ a:hover {
   margin: 10px;
   box-shadow: 10px 10px 15px silver;
   color: black;
-
 }
-
 
 /*            Fußzeile CSS              */
 
@@ -275,7 +239,7 @@ a:hover {
   color: black;
 }
 
-.fußbereich { 
+.fußbereich {
   margin-left: auto;
   margin-right: auto;
 }
@@ -293,6 +257,3 @@ a:hover {
 .aktiver-Stern {
   color: #c33ced;
 }
-
-
-

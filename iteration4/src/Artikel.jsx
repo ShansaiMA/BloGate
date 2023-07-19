@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import Artikel1Daten from '../src/properties/Artikel1Daten';
-import Artikel2Daten from '../src/properties/Artikel2Daten';
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+import Artikel1Daten from "../src/properties/Artikel1Daten";
+import Artikel2Daten from "../src/properties/Artikel2Daten";
 
 const Artikel = ({ addToFavoriten }) => {
   const { id } = useParams();
@@ -9,14 +9,14 @@ const Artikel = ({ addToFavoriten }) => {
   const [isFavorit, setIsFavorit] = useState(false);
 
   let articleData;
-  if (id === '1') {
+  if (id === "1") {
     articleData = Artikel1Daten;
-  } else if (id === '2') {
+  } else if (id === "2") {
     articleData = Artikel2Daten;
   }
 
   const handleFavoritenClick = () => {
-    console.log('handleFavoritenClick wurde aufgerufen');
+    console.log("handleFavoritenClick wurde aufgerufen");
     if (addToFavoriten) {
       addToFavoriten({
         id,
@@ -27,7 +27,7 @@ const Artikel = ({ addToFavoriten }) => {
         datum: articleData.datum,
       });
       setIsFavorit(true);
-      console.log('Artikel wurde zu Favoriten hinzugefügt:', {
+      console.log("Artikel wurde zu Favoriten hinzugefügt:", {
         id,
         url: articleData.url,
         titel: articleData.titel,
@@ -56,14 +56,14 @@ const Artikel = ({ addToFavoriten }) => {
               Artikel ist ein Favorit
             </button>
           ) : (
-            <div className='FavouritenButton'>
-            <button
-              className="button"
-              onClick={handleFavoritenClick}
-              id="Favoritenbutton"
-            >
-              Zu Favoriten hinzufügen
-            </button>
+            <div className="FavouritenButton">
+              <button
+                className="button"
+                onClick={handleFavoritenClick}
+                id="Favoritenbutton"
+              >
+                Zu Favoriten hinzufügen
+              </button>
             </div>
           )}
         </div>

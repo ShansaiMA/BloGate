@@ -1,14 +1,11 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 function Impressum() {
   return (
     <div>
-
       <div className="content-impressum">
-        <h2 className='Überschrifth2'>Impressum</h2>
-
-
+        <h2 className="Überschrifth2">Impressum</h2>
 
         <div className="autorenbox">
           <ul>
@@ -17,7 +14,6 @@ function Impressum() {
             <li>Hochschule: HRW</li>
           </ul>
         </div>
-
 
         <div className="autorenbox">
           <ul>

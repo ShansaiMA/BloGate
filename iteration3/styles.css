@@ -9,12 +9,8 @@
   background-color: #f3f5f6;
 }
 
-/* Notes: An manchen Stellen ist die Farbe anders (z.B Figurelement) -  Anpassen dass bei Seite kleiner machen alles drauf ist, mäßig minimieren - Blaue Verweis Farbe wechseln 
-windows taste + "." = EMOJIS */
-
 body {
   background: linear-gradient(180deg, #f3f5f6, #eeecec);
-  /* Noch Farbe ändern (Weiss mit Grau), in der Mtite ist die Farbe noch anders neben der Produkttabelle usw. */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -24,24 +20,19 @@ body {
 main {
   width: 100vw;
   margin: 0 auto;
-  /* padding: 30px 20px; */
 }
 
 header,
 main,
 footer {
   margin: 30px auto;
-  /* margin-top: max(30px, auto); machen für das obere*/
   width: 80%;
 }
 
-/* Navigation-Bar / Changen bis CSA Hover */
+/* Navigation-Bar  */
 
 .header {
   display: block;
-  /* display: flex;
-   justify-content: space-between;
-   align-items: center; (Kontaktbutton Bug, nicht nach Rechts verschoben */
   padding: 10px;
   background-color: #f3f5f6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -58,7 +49,7 @@ a:hover {
 }
 .emojis {
   color: rgb(255, 255, 255);
-  background-color: #336699
+  background-color: #336699;
 }
 
 .logo {
@@ -175,9 +166,7 @@ a:hover {
   margin: 30px auto;
   background: #f3f5f6;
   /* Selbe Farbe wie Body gemacht */
-  /*margin: auto; */
 }
-
 
 /* Das Untere gehört zum Kommentarbereich*/
 .KommentarFormular {
@@ -212,5 +201,3 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
 }
-
-

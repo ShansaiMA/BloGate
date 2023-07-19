@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Startseite from './Startseite';
-import Artikel from './Artikel';
-import Favoriten from './Favoriten';
-import Impressum from './Impressum';
-import Kontakt from './Kontakt';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Startseite from "./Startseite";
+import Artikel from "./Artikel";
+import Favoriten from "./Favoriten";
+import Impressum from "./Impressum";
+import Kontakt from "./Kontakt";
+import "./App.css";
 
 function MainView() {
   const [favoriten, setFavoriten] = useState([]);
 
   const addToFavoriten = (artikel) => {
     setFavoriten((prevFavoriten) => {
-      const isAlreadyAdded = prevFavoriten.find((item) => item.id === artikel.id);
+      const isAlreadyAdded = prevFavoriten.find(
+        (item) => item.id === artikel.id
+      );
 
       if (!isAlreadyAdded) {
         return [...prevFavoriten, artikel];
@@ -38,7 +40,12 @@ function MainView() {
         />
         <Route
           path="/favoriten"
-          element={<Favoriten favoriten={favoriten} removeFromFavoriten={removeFromFavoriten} />}
+          element={
+            <Favoriten
+              favoriten={favoriten}
+              removeFromFavoriten={removeFromFavoriten}
+            />
+          }
         />
 
         <Route path="/impressum" element={<Impressum />} />
