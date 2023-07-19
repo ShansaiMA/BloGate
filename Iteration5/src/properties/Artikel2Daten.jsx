@@ -55,17 +55,21 @@ const Artikel2Daten = {
           <legend>
             <h2>Sprich Dich aus</h2>
           </legend>
-          <Rating/>
-          <div>
+          <div className="form-group">
+            <Rating />
+          </div>
+          <div className="form-group">
             <label htmlFor="kommentar">
               <h3>Kommentar:</h3>
             </label>
           </div>
-          <div>
-            <Zeichenzähler/>
+          <div className="form-group">
+            <Zeichenzähler />
           </div>
-          <div>
-            <button className="button" type="submit">Speichern</button>
+          <div className="form-group">
+            <button className="button" type="submit">
+              Speichern
+            </button>
           </div>
         </fieldset>
       </form>

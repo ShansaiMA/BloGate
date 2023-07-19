@@ -2,12 +2,12 @@
 import Zeichenzähler from '../Zeichenzähler';
 import Rating from '../Rating';
 
-const Artikel1Daten = { 
+const Artikel1Daten = {
   id: '1',
   url: "/artikel1",
   titel: "Die Gerüchte Küche brodelt: GTA 6 noch vor dem 17. Mai 2023?",
   autor: "Armo",
-  bild_url: "../img/Artikel Fotos/Artikel 1.jpeg",         
+  bild_url: "../img/Artikel Fotos/Artikel 1.jpeg",
   datum: "24.04.2023",
   content: (
     <div className="content">
@@ -65,24 +65,25 @@ const Artikel1Daten = {
           <legend>
             <h2>Sprich Dich aus</h2>
           </legend>
-          <div>
-            <Rating/>
+          <div className="form-group">
+            <Rating />
           </div>
-          <div>
+          <div className="form-group">
             <label htmlFor="kommentar">
               <h3>Kommentar:</h3>
             </label>
           </div>
-          <div>
-            <Zeichenzähler/>
+          <div className="form-group">
+            <Zeichenzähler />
           </div>
-          <div>
+          <div className="form-group">
             <button className="button" type="submit">
               Speichern
             </button>
           </div>
         </fieldset>
       </form>
+
     </div>
   ),
 };

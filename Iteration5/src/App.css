@@ -211,8 +211,11 @@ a:hover {
 }
 
 .content-impressum {
-  width: 80%;
-  margin: 90px auto;
+  width: 18rem;
+  margin: 10px auto;
+  margin-left: 20px;
+  box-shadow: 10px 10px 15px silver;
+  
 }
 
 /*        Sterne-Bewertung         */
