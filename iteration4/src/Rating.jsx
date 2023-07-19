@@ -25,7 +25,7 @@ const Rating = ({ stars, clickHandler }) => {
 
     for (let i = 1; i <= maxRating; i++) {
       const starClass =
-        i <= (hoveredRating || selectedRating) ? 'aktiver-Stern' : 'leerer-Stern';
+        i <= (hoveredRating || selectedRating) ? 'aktiver-Stern' : 'leerer-Stern'; //CSS Namen gleichzeitig
 
       starIcons.push(
         <span

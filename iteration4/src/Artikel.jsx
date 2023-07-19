@@ -56,6 +56,7 @@ const Artikel = ({ addToFavoriten }) => {
               Artikel ist ein Favorit
             </button>
           ) : (
+            <div className='FavouritenButton'>
             <button
               className="button"
               onClick={handleFavoritenClick}
@@ -63,6 +64,7 @@ const Artikel = ({ addToFavoriten }) => {
             >
               Zu Favoriten hinzufügen
             </button>
+            </div>
           )}
         </div>
       ) : (

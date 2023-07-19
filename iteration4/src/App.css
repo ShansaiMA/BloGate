@@ -168,6 +168,12 @@ a:hover {
   color: #ffffff;
 }
 
+.FavouritenButton {
+  padding-left: 100px;
+  padding-bottom: 50px ;
+}
+
+
 .Überschrifth1 {
   /*noch nicht Überall Überschriften verändert... className="#" */
 
